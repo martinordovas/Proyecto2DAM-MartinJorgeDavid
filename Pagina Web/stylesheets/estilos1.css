@@ -18,7 +18,7 @@ body{
     object-fit: cover;
 }
 
-.textoCarrusel{
+.formCarrusel{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -55,23 +55,32 @@ body{
 }
 .quienesSomos{
     padding-top: 40px;
-    padding-left: 40px;
-    padding-right: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #163b8d;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    margin: 40px;
+    padding: 30px;
+    overflow: hidden;
 }
 
 .quienesSomos img{
-    padding-top: 40px;
+    margin-top: 40px;
     width: 75%;
     height: 400px;
     object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
 .quienesSomos h1{
+    margin-top: 20px;
+    text-align: center;
     align-items: center;
     justify-content: center;
+    text-shadow: 2px 2px 4px #000000;
 }
 
 .quienesSomos p{
@@ -103,4 +112,21 @@ body{
 
 .formularioCentral .btn {
     border-radius: 10px;
+}
+
+#navbarPaginaPrincipal .navbar-toggler {
+    border-color: white; /* Borde blanco */
+}
+
+#navbarPaginaPrincipal .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+#navbarPaginaPrincipal.cambioNavbar .navbar-toggler {
+    border-color: black;
+}
+
+#navbarPaginaPrincipal.cambioNavbar .navbar-toggler-icon {
+    /* Este código cambia el color SVG interno a negro */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
 }

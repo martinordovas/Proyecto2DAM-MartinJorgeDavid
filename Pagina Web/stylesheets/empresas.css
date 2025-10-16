@@ -1,0 +1,85 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
+
+
+#navbarPaginaPrincipal{
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+}
+#navbarPaginaPrincipal .nav-link{
+    color: rgb(17, 17, 17) !important; /* He añadido !important para asegurar la prevalencia */
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.cambioNavbar{
+    background-color: white !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#navbarPaginaPrincipal.cambioNavbar .nav-link {
+    color: black !important;
+    text-shadow: none;
+}
+
+#navbarPaginaPrincipal.cambioNavbar
+ {
+    color: black !important;
+}
+
+/* Contenedor con fondo */
+.fondo {
+    position: relative;
+    height: 100vh;
+    background-image: url('../images/lasalle.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrusel {
+    position: relative;
+    z-index: 2;
+    width: 40%;
+    height: 40%;
+    overflow: hidden;
+    background-color: rgba(255,255,255,0.85);
+    border-radius: 10px;
+    color: black;
+}
+
+.carrusel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.empresa {
+    min-width: 100%;
+    text-align: center;
+    padding: 30, 20, 30, 20 ;
+}
+
+.empresa img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.boton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }

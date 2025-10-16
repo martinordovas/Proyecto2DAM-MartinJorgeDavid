@@ -13,29 +13,32 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
-    <script src='bootstrap/js/bootstrap.bundle.js'></script>
 </head>
 
-<body class="bg-dark">
+<body class="bg-white">
     <!-- <nav id="navbarPaginaPrincipal" class="navbar shadow-lg bg-light navbar-expand-lg fixed-top"> -->
     <nav id="navbarPaginaPrincipal" class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-            <div class="navbar-collapse">
-                <img src="logo-arlep-minusculas.png" alt="Logo de La Salle" width="100px">
+            <img src="logo-arlep-minusculas.png" alt="Logo de La Salle" width="100px">
+            <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar"
+                aria-controls="menuNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNavbar">
                 <ul class="navbar-nav ms-auto">
                     <!--El "nav-item" de momento no hace nada, si acaba así, borrarlo antes de entregarlo-->
                     <li class="nav-item"><a href="#carruselFotos" class="nav-link">Inicio</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Sobre nosotros</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Iniciar sesi&oacute;n</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Empresa ganadora</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Empresas</a></li>
+                    <li class="nav-item"><a href="Empresas.html" class="nav-link">Empresas</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <section>
         <div id="carruselFotos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-            <div class="formularioCentral textoCarrusel">
+            <div class="formularioCentral formCarrusel">
                 <h2 class="text-center mb-3">Regístrate para la Feria 2025</h2>
                 <form>
                     <div class="mb-3">
@@ -82,14 +85,9 @@
                         </b></h1>
                     <img src="images/fotoEjemploFondo2.jpg" alt="Foto de ejemplo 2">
                     <p>
-                        Doña Uzeada de Ribera Maldonado de Bracamonte y Anaya era baja, rechoncha, abigotada. Ya no
-                        existia razon para llamar talle al suyo. Sus colores vivos, sanos, podian mas que el albayalde y
-                        el soliman del afeite, con que se blanqueaba por simular melancolias. Gastaba dos parches
-                        oscuros, adheridos a las sienes y que fingian medicamentos. Tenia los ojitos ratoniles,
-                        maliciosos. Sabia dilatarlos duramente o desmayarlos con recato o levantarlos con disimulo.
-                        Caminaba contoneando las imposibles caderas y era dificil, al verla, no asociar su estampa
-                        achaparrada con la de ciertos palmipedos domesticos. Sortijas celestes y azules le ahorcaban las
-                        falanges
+                        Desde 2007, ayudamos a las empresas y despachos profesionales a digitalizar sus procesos con 
+                        herramientas informáticas de última generación, optimizando los procesos de gestión empresarial 
+                        para resolver los retos a los que hay que enfrentarse diariamente en cada negocio.
                     </p>
                 </div>
             </div>
@@ -98,6 +96,7 @@
     <footer>
 
     </footer>
+    <script src='bootstrap/js/bootstrap.bundle.js'></script>
     <script src="javascripts/script1.js"></script>
 </body>
 
