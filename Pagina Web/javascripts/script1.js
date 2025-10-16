@@ -1,3 +1,6 @@
+const enlaceFormulario = document.getElementById('enlaceFormulario');
+const tituloContenedor = document.getElementById('tituloContenedor');
+const formularioContenedor = document.getElementById('formularioContenedor');
 const barraNavegacion = document.getElementById('navbarPaginaPrincipal');
 const contenidoMenu = document.getElementById('menuNavbar');
 const quienesSomos = document.getElementById('quienesSomos');
@@ -24,32 +27,33 @@ contenidoMenu.addEventListener('hide.bs.collapse', function() {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const quienesSomosElement = document.getElementById('quienesSomos');
-    
-    if (!quienesSomosElement) return;
-
-    const opciones = {
-        root: null, 
-        rootMargin: '0px 0px -100px 0px', 
-        threshold: 0.1
-    };
-
-    // La función callback del observador debe tener la sintaxis correcta
+    if (!quienesSomos) return;
+    const opciones = {root: null, rootMargin: '0px 0px -100px 0px', threshold: 0.1};
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Cuando es visible:
-                // 1. Quitar la clase de estado inicial (oculto/ocultar)
                 entry.target.classList.remove('ocultar'); 
-                // 2. Aplicar la clase que activa la animación
                 entry.target.classList.add('aparecer');
                 
-                // Dejar de observar para que la animación no se repita
                 observer.unobserve(entry.target);
             }
         });
-    }, opciones); // Aquí pasamos las opciones
+    }, opciones);
+    observer.observe(quienesSomos);
 
-    // Empezamos a observar el elemento
-    observer.observe(quienesSomosElement);
+    if (enlaceFormulario && tituloContenedor && formularioContenedor){
+        enlaceFormulario.addEventListener('click', function(event) {
+            event.preventDefault();
+            if(!formularioContenedor.classList.contains('formulario-aparecer')){
+                tituloContenedor.style.opacity = '0';
+                formularioContenedor.classList.add('formulario-aparecer');
+                setTimeout(() => {
+                    formularioContenedor.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }, 500);
+            }
+        });
+    }
 });

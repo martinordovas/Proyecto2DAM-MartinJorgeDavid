@@ -16,7 +16,6 @@
 </head>
 
 <body class="bg-white">
-    <!-- <nav id="navbarPaginaPrincipal" class="navbar shadow-lg bg-light navbar-expand-lg fixed-top"> -->
     <nav id="navbarPaginaPrincipal" class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <img src="logo-arlep-minusculas.png" alt="Logo de La Salle" width="100px">
@@ -29,7 +28,8 @@
                     <!--El "nav-item" de momento no hace nada, si acaba así, borrarlo antes de entregarlo-->
                     <li class="nav-item"><a href="#carruselFotos" class="nav-link">Inicio</a></li>
                     <li class="nav-item"><a href="" class="nav-link">Sobre nosotros</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Iniciar sesi&oacute;n</a></li>
+                    <li class="nav-item"><a href="#" id="enlaceFormulario" class="nav-link">Iniciar sesi&oacute;n</a>
+                    </li>
                     <li class="nav-item"><a href="" class="nav-link">Empresa ganadora</a></li>
                     <li class="nav-item"><a href="Empresas.html" class="nav-link">Empresas</a></li>
                 </ul>
@@ -38,20 +38,25 @@
     </nav>
     <section>
         <div id="carruselFotos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-            <div class="formularioCentral formCarrusel">
-                <h2 class="text-center mb-3">Regístrate para la Feria 2025</h2>
-                <form>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" placeholder="Nombre completo">
-                    </div>
-                    <div class="mb-3">
-                        <input type="email" class="form-control" placeholder="Correo electrónico">
-                    </div>
-                    <div class="mb-3">
-                        <input type="password" class="form-control" placeholder="Contraseña">
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Registrarse</button>
-                </form>
+            <div class="contenidoSuperpuesto">
+                <div id="tituloContenedor">
+                    <h1 class="text-center"><b>Bienvenid@ a la feria de La Salle 2025</b></h1>
+                </div>
+                <div id="formularioContenedor" class="formularioCentral formularioOculto">
+                    <form id="formularioRegistro">
+                        <h2 class="text-center mb-3">Regístrate para la Feria 2025</h2>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Nombre completo">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Correo electrónico">
+                        </div>
+                        <div class="mb-3">
+                            <input type="password" class="form-control" placeholder="Contraseña">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+                    </form>
+                </div>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active ajusteCarrusel">
@@ -82,10 +87,34 @@
                     </b></h1>
                 <img src="images/fotoEjemploFondo2.jpg" alt="Foto de ejemplo 2">
                 <p>
-                    Desde 2007, ayudamos a las empresas y despachos profesionales a digitalizar sus procesos con 
-                    herramientas informáticas de última generación, optimizando los procesos de gestión empresarial 
+                    Desde 2007, ayudamos a las empresas y despachos profesionales a digitalizar sus procesos con
+                    herramientas informáticas de última generación, optimizando los procesos de gestión empresarial
                     para resolver los retos a los que hay que enfrentarse diariamente en cada negocio.
                 </p>
+            </div>
+        </div>
+    </article>
+    <article>
+        <div class="container">
+            <div class="col1">
+                <h2><b>Empresa Ganadora 2025</b></h2>
+                <div class="imagen_container">
+                    <img src="images/logo1.jpeg" alt="Logo de la empresa ganadora" class="imagen_centrada">
+                </div>
+            </div>
+
+            <!-- Segunda columna -->
+            <div class="col2">
+                <div class="row1">
+                    <h5><b>Este es el spot ganador de este año</b></h5>
+                </div>
+                <div class="row2">
+                    <video class="video_centrada" controls>
+                        <source
+                            src="/home/mogmojito/Descargas/video.mp4"
+                            type="video/mp4">
+                    </video>
+                </div>
             </div>
         </div>
     </article>
