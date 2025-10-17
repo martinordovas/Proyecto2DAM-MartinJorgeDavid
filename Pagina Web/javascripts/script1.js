@@ -26,9 +26,10 @@ contenidoMenu.addEventListener('hide.bs.collapse', function() {
     }
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    if (!quienesSomos) return;
-    const opciones = {root: null, rootMargin: '0px 0px -100px 0px', threshold: 0.1};
+function aparecerRecuadro(nombre, altura){
+    const recuadro = document.getElementById(nombre);
+    if(!recuadro)return;
+    const opciones = {root: null, rootMargin: `0px 0px ${altura}px 0px`, threshold: 0.1};
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -39,8 +40,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }, opciones);
-    observer.observe(quienesSomos);
+    observer.observe(recuadro);
+}
 
+document.addEventListener('DOMContentLoaded', () => {
+    aparecerRecuadro("quienesSomos", -200);
+    aparecerRecuadro("contenedor", -200);
     if (enlaceFormulario && tituloContenedor && formularioContenedor){
         enlaceFormulario.addEventListener('click', function(event) {
             event.preventDefault();
