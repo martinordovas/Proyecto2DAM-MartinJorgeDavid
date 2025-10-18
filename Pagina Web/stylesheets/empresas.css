@@ -8,25 +8,14 @@ body{
     background-color:white;
     transition: background-color 0.5s ease;
 }
-#navbarPaginaPrincipal .nav-link{
-    color: rgb(17, 17, 17) !important; /* He añadido !important para asegurar la prevalencia */
-    text-shadow: 2px 2px 4px #000000;
+
+#navbarPaginaPrincipal .nav-link:hover {
+    background-color:#0b4d8a;
+    color: white !important;
+    border-radius: 10px;
 }
 
-.cambioNavbar{
-    background-color: white !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
 
-#navbarPaginaPrincipal.cambioNavbar .nav-link {
-    color: black !important;
-    text-shadow: none;
-}
-
-#navbarPaginaPrincipal.cambioNavbar
- {
-    color: black !important;
-}
 
 /* Contenedor con fondo */
 .fondo {
