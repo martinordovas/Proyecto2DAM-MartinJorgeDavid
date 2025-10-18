@@ -5,7 +5,7 @@ body{
 
 
 #navbarPaginaPrincipal{
-    background-color: transparent;
+    background-color:white;
     transition: background-color 0.5s ease;
 }
 #navbarPaginaPrincipal .nav-link{
@@ -32,7 +32,7 @@ body{
 .fondo {
     position: relative;
     height: 100vh;
-    background-image: url('../images/lasalle.jpg');
+    background-image: url('../images/fotoEjemploFondo2.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -41,45 +41,123 @@ body{
 }
 
 .carrusel {
-    position: relative;
-    z-index: 2;
-    width: 40%;
-    height: 40%;
-    overflow: hidden;
-    background-color: rgba(255,255,255,0.85);
-    border-radius: 10px;
-    color: black;
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .carrusel-inner {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+  display: flex;
+  transition: transform 0.5s ease-in-out;
 }
 
+/* Cada empresa ocupa 100% del ancho del carrusel */
 .empresa {
-    min-width: 100%;
-    text-align: center;
-    padding: 30, 20, 30, 20 ;
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* dos columnas iguales */
+  align-items: center;
+  gap: 0;
+  height: 100%;
 }
 
-.empresa img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 15px;
+/* Columna izquierda: imagen */
+.empresa__imagen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+  height: 100%;
+  padding: 40px; /* crea el margen alrededor de la imagen */
 }
 
+.empresa__imagen img {
+  width: 80%;           /* la imagen no llena todo el espacio */
+  height: auto;
+  object-fit: contain;  /* mantiene proporciones */
+  border-radius: 12px;  /* opcional: bordes suaves */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  background: white;    /* fondo blanco si la imagen tiene transparencia */
+}
+/* Columna derecha: información */
+.empresa__info {
+  padding: 40px;
+  text-align: left;
+}
+.empresa__info h3 {
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+  color: #0b4d8a;
+}
+.empresa__info p {
+  margin: 4px 0;
+  font-size: 1.1rem;
+  color: #2f4b6b;
+}
+
+/* Botones */
+.botones {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+}
+.btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-primary {
+  background: #0b4d8a;
+  color: #fff;
+  border: none;
+}
+.btn-primary:hover { background: #083866; }
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #0b4d8a;
+  color: #0b4d8a;
+}
+.btn-outline:hover {
+  background: #0b4d8a;
+  color: #fff;
+}
+
+/* Flechas del carrusel */
 .boton {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 3;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #163b8d;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
 }
-
 .prev { left: 10px; }
 .next { right: 10px; }
+.boton:hover { background-color: #0b3a75; }
+
+/* Responsive: apilar en pantallas pequeñas */
+@media (max-width: 760px) {
+  .empresa {
+    grid-template-columns: 1fr;
+  }
+  .empresa__info {
+    text-align: center;
+    padding: 20px;
+  }
+  .botones {
+    justify-content: center;
+  }
+}
