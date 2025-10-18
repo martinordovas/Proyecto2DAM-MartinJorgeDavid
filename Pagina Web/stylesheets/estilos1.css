@@ -198,8 +198,10 @@ body {
 }
 
 .col1 {
+    color: #000000;
     margin-top: 10px;
     background-color: white;
+    text-align: center;
     border-radius: 10px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
@@ -208,17 +210,9 @@ body {
     text-align: center;
     color: #163b8d;
 }
-
-.imagen_container {
-    justify-content: center;
-    align-items: center;
-}
-
-.imagen_centrada {
-    max-width: 80%;
-    max-height: 80%;
+.col1 img{
+    height: 250px;
     border-radius: 10px;
-    padding-bottom: 30px;
 }
 
 .col2 {
