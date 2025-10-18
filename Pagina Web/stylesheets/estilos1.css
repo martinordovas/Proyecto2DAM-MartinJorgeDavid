@@ -188,6 +188,7 @@ body {
 }
 
 .contenedor {
+    padding: 20px;
     width: 80%;
     max-width: 1000px;
     border-radius: 15px;
@@ -198,6 +199,7 @@ body {
 }
 
 .col1 {
+    padding: 15px;
     color: #000000;
     margin-top: 10px;
     background-color: white;
@@ -220,6 +222,7 @@ body {
 }
 
 .row1 {
+    padding: 15px;
     background-color: white;
     align-items: center;
     border-radius: 10px;
