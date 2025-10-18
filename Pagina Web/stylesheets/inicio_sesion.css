@@ -43,8 +43,10 @@ body {
 .texto{
     color: rgba(22, 59, 141);
     font-weight: 600;
+    border-radius: 10px;
 }
 
 .texto:hover{
-    color:white;
+    color:white !important;
+    background-color: #0b4b8a;
 }

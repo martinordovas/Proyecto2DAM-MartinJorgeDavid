@@ -15,7 +15,10 @@ body{
     border-radius: 10px;
 }
 
-
+#navbarPaginaPrincipal .nav-link {
+    color: rgba(22, 59, 141);
+    border-radius: 10px; 
+}
 
 /* Contenedor con fondo */
 .fondo {
