@@ -46,19 +46,19 @@ function aparecerRecuadro(nombre, altura){
 document.addEventListener('DOMContentLoaded', () => {
     aparecerRecuadro("quienesSomos", -200);
     aparecerRecuadro("contenedor", -200);
-    if (enlaceFormulario && tituloContenedor && formularioContenedor){
-        enlaceFormulario.addEventListener('click', function(event) {
-            event.preventDefault();
-            if(!formularioContenedor.classList.contains('formulario-aparecer')){
-                tituloContenedor.style.opacity = '0';
-                formularioContenedor.classList.add('formulario-aparecer');
-                setTimeout(() => {
-                    formularioContenedor.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'center'
-                    });
-                }, 500);
-            }
-        });
-    }
+    // if (enlaceFormulario && tituloContenedor && formularioContenedor){
+    //     enlaceFormulario.addEventListener('click', function(event) {
+    //         event.preventDefault();
+    //         if(!formularioContenedor.classList.contains('formulario-aparecer')){
+    //             tituloContenedor.style.opacity = '0';
+    //             formularioContenedor.classList.add('formulario-aparecer');
+    //             setTimeout(() => {
+    //                 formularioContenedor.scrollIntoView({
+    //                     behavior: 'smooth',
+    //                     block: 'center'
+    //                 });
+    //             }, 500);
+    //         }
+    //     });
+    // }
 });

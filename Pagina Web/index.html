@@ -25,12 +25,11 @@
             </button>
             <div class="collapse navbar-collapse" id="menuNavbar">
                 <ul class="navbar-nav ms-auto">
-                    <!--El "nav-item" de momento no hace nada, si acaba así, borrarlo antes de entregarlo-->
                     <li class="nav-item"><a href="#carruselFotos" class="nav-link">Inicio</a></li>
                     <li class="nav-item"><a href="#quienesSomos" class="nav-link">Sobre nosotros</a></li>
+                    <li class="nav-item"><a href="#contenedor" class="nav-link">Empresa ganadora</a></li>
                     <li class="nav-item"><a href="#" id="enlaceFormulario" class="nav-link">Iniciar sesi&oacute;n</a>
                     </li>
-                    <li class="nav-item"><a href="#contenedor" class="nav-link">Empresa ganadora</a></li>
                     <li class="nav-item"><a href="Empresas.html" class="nav-link">Empresas</a></li>
                 </ul>
             </div>
@@ -95,23 +94,27 @@
         </div>
     </article>
     <article>
-        <div class="contenedor ocultar" id="contenedor">
-            <div class="col1">
-                <h2><b>Empresa Ganadora 2025</b></h2>
-                <div class="imagen_container">
-                    <img src="images/logo1.jpeg" alt="Logo de la empresa ganadora" class="imagen_centrada">
+        <div class="container-fluid contenedor ocultar" id="contenedor">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="col1">
+                        <h2><b>Empresa Ganadora 2025</b></h2>
+                        <div class="imagen_container">
+                            <img src="images/logo1.jpeg" alt="Logo de la empresa ganadora" class="imagen_centrada">
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Segunda columna -->
-            <div class="col2">
-                <div class="row1">
-                    <h5><b>Este es el spot ganador de este año</b></h5>
-                </div>
-                <div class="row2">
-                    <video class="video_centrada" controls>
-                        <source src="/home/mogmojito/Descargas/video.mp4" type="video/mp4">
-                    </video>
+                <div class="col-md-6 col2">
+                    <div class="row">
+                        <div class="col-12 row1">
+                            <h5><b>Este es el spot ganador de este año</b></h5>
+                        </div>
+                        <div class="col-12 row2">
+                            <video class="video_centrada" controls>
+                                <source src="/home/mogmojito/Descargas/video.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
