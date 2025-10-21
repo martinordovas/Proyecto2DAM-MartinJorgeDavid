@@ -13,9 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
-<body class="bg-white">
+<body class="cuadroInterior">
     <nav id="navbarPaginaPrincipal" class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <img src="logo-arlep-minusculas.png" alt="Logo de La Salle" width="100px">
@@ -28,7 +29,8 @@
                     <li class="nav-item"><a href="#carruselFotos" class="nav-link">Inicio</a></li>
                     <li class="nav-item"><a href="#quienesSomos" class="nav-link">Sobre nosotros</a></li>
                     <li class="nav-item"><a href="#contenedor" class="nav-link">Empresa ganadora</a></li>
-                    <li class="nav-item"><a href="inicio_sesion.html" id="enlaceFormulario" class="nav-link">Iniciar sesi&oacute;n</a>
+                    <li class="nav-item"><a href="inicio_sesion.html" id="enlaceFormulario" class="nav-link">Iniciar
+                            sesi&oacute;n</a>
                     </li>
                     <li class="nav-item"><a href="Empresas.html" class="nav-link">Empresas</a></li>
                 </ul>
@@ -57,7 +59,7 @@
                     </form>
                 </div>
             </div>
-         <div class="carousel-inner">
+            <div class="carousel-inner">
                 <div class="carousel-item active ajusteCarrusel">
                     <img src="images/fotoEjemploFondo1.jpg" class="d-block w-100" alt="Foto 1">
                 </div>
@@ -101,22 +103,25 @@
                         <h2><b>Empresa Ganadora 2025</b></h2>
                         <img src="images/logo1.jpeg" alt="Logo de la empresa ganadora">
                         <p>
-                            Ayudamos a las empresas a modernizarse mediante la digitalización de procesos clave, 
-                            la implantación de soluciones basadas en inteligencia artificial y consultoría especializada. 
-                            Nuestro enfoque está orientado a optimizar operaciones y mejorar la 
+                            Ayudamos a las empresas a modernizarse mediante la digitalización de procesos clave,
+                            la implantación de soluciones basadas en inteligencia artificial y consultoría
+                            especializada.
+                            Nuestro enfoque está orientado a optimizar operaciones y mejorar la
                             competitividad en un entorno digital.
                         </p>
                     </div>
                 </div>
                 <div class="col-md-6 col2">
-                    <div class="row">
-                        <div class="col-12 row1">
-                            <h5><b>Este es el spot ganador de este año</b></h5>
-                        </div>
-                        <div class="col-12 row2">
-                            <video class="video_centrada" controls>
-                                <source src="/home/mogmojito/Descargas/video.mp4" type="video/mp4">
-                            </video>
+                    <div class="col-12 row1">
+                        <h5><b>Este es el spot ganador de este año</b></h5>
+                    </div>
+                    <div class="col-12 row2">
+                        <div class="ratio ratio-16x9">
+                            <iframe class="video_centrada"
+                                src="https://www.youtube.com/embed/cG7cRDcPY3k?si=Er3714yu9xHQZq2y"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -124,7 +129,36 @@
         </div>
     </article>
     <footer>
-
+        <div class="container-fluid">
+            <div class="row piePagina">
+                <div class="col-md-4 columna1Footer">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <h5><b>Nuestra ubicación</b></h5>
+                        <a href="https://maps.app.goo.gl/7xVmBDbeuFshzQDv7"><i
+                                class="bi bi-geo-alt-fill fs-4 ajustarIcono"></i></a>
+                    </div>
+                    <a class="ajustarEnlaces" href="https://maps.app.goo.gl/7xVmBDbeuFshzQDv7">C. de Tomás Anzano, 1,
+                        Casablanca, 50012 Zaragoza</a>
+                </div>
+                <div class="col-md-4 columna2Footer">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <h5><b>Contáctanos</b></h5>
+                        <a href="https://contacts.google.com/"><i
+                                class="bi bi-telephone-plus-fill fs-4 ajustarIcono"></i></a>
+                    </div>
+                    <a class="ajustarEnlaces" href="mailto:correoejemplo@gmail.com">correoejemplo@gmail.com</a>
+                </div>
+                <div class="col-md-4 columna3Footer">
+                    <h5><b>Redes sociales</b></h5>
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="https://x.com/"><i class="bi bi-twitter fs-4 ajustarIcono"></i></a>
+                        <a href="https://www.facebook.com/"><i class="bi bi-facebook fs-4 ajustarIcono"></i></a>
+                        <a href="https://www.instagram.com/"><i class="bi bi-instagram fs-4 ajustarIcono"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="bi bi-linkedin fs-4 ajustarIcono"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
     <script src='bootstrap/js/bootstrap.bundle.js'></script>
     <script src="javascripts/script1.js"></script>

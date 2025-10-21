@@ -3,6 +3,14 @@ body {
     color: white;
 }
 
+.cuadroInterior{
+    /* background-color: white; */
+    /* background-image: url(../images/fondo.png); */
+    background-color: #0a1a3b;
+    background-image: url(../images/imagen_centro_login.png);
+    background-blend-mode: multiply;
+}
+
 #carruselFotos {
     position: relative;
 }
@@ -26,10 +34,15 @@ body {
 #navbarPaginaPrincipal .nav-link {
     color: white !important;
     text-shadow: 2px 2px 4px #000000;
-    transition: background-color 0.3s ease; 
+    transition: 
+        background-color 0.3s ease, 
+        color 0.3s ease,
+        text-shadow 0.3s ease,
+        border-bottom 0.3s ease;
     border-radius: 5px;
     padding-left: 15px !important; 
     padding-right: 15px !important;
+    font-weight: 600;
 }
 
 #navbarPaginaPrincipal .nav-link:hover {
@@ -39,12 +52,19 @@ body {
 
 .cambioNavbar {
     background-color: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(8px);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid rgba(22, 59, 141);
 }
 
 #navbarPaginaPrincipal.cambioNavbar .nav-link {
-    color: black !important;
+    color: rgba(22, 59, 141) !important;
     text-shadow: none;
+}
+
+#navbarPaginaPrincipal.cambioNavbar .nav-link:hover {
+    color: white !important;
+    background-color: rgba(22, 59, 141, 1);
 }
 
 #navbarPaginaPrincipal.cambioNavbar,
@@ -193,7 +213,7 @@ body {
     max-width: 1000px;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     background-color: white;
     background-color: #163b8d;
 }
@@ -218,7 +238,7 @@ body {
 }
 
 .col2 {
-    
+    margin-top: 10px;
 }
 
 .row1 {
@@ -234,12 +254,15 @@ body {
 .row2 {
     justify-content: center;
     align-items: center;
+    margin-top: 15%;
+    text-align: center;
     font-size: 1rem;
 }
 
 .video_centrada {
-    max-width: 100%;
-    max-height: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
     border-radius: 10px;
 }
 
@@ -253,6 +276,43 @@ body {
     animation: fade-in-up 0.8s ease-out forwards;
 }
 
-.cuadroInterior{
-    background-color: white;
+.piePagina{
+    background-color: #112e6e;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.columna1Footer{
+    padding: 50px 20px 50px 20px;
+}
+
+.columna2Footer{
+    padding: 50px 20px 50px 20px;
+}
+
+.columna3Footer{
+    padding: 50px 20px 50px 20px;
+}
+
+.ajustarIcono{
+    color: inherit;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+}
+
+.ajustarIcono:hover{
+    transition: color 0.3s ease; 
+    color: rgb(51, 51, 51);
+}
+
+.ajustarEnlaces{
+    color: inherit;
+    color: white;
+}
+
+.ajustarEnlaces:hover{
+    transition: color 0.3s ease; 
+    color: rgb(51, 51, 51);
 }
