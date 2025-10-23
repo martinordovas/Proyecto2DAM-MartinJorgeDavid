@@ -1,163 +1,191 @@
-body{
-    font-family: 'Montserrat', sans-serif;
-    color: white;
+body {
+	font-family: 'Montserrat', sans-serif;
+	color: white;
 }
 
-
-#navbarPaginaPrincipal{
-    background-color:white;
-    transition: background-color 0.5s ease;
-   
+#navbarPaginaPrincipal {
+	background-color: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(8px);
+	border-bottom: 3px solid rgba(22, 59, 141);
 }
+
 #navbarPaginaPrincipal .nav-link {
-    color: black;
-    border-radius: 10px;
-  
+	color: black;
+	border-radius: 10px;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	font-weight: 600;
 }
 
 #navbarPaginaPrincipal .nav-link:hover {
-    background-color:#0b4d8a;
-    color: white !important;
-    border-radius: 10px;
+	background-color: #0b4d8a;
+	color: white !important;
+	border-radius: 10px;
 }
 
 #navbarPaginaPrincipal .nav-link {
-    color: rgba(22, 59, 141);
-    border-radius: 10px; 
+	color: rgba(22, 59, 141);
+	border-radius: 10px;
 }
 
 
 
 /* Contenedor con fondo */
 .fondo {
-    position: relative;
-    height: 100vh;
-    background-image: url('../images/fotoEjemploFondo2.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	position: relative;
+	height: 100vh;
+	background-image: url('../images/fotoEjemploFondo2.jpg');
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .carrusel {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  overflow: hidden;
-  background: rgba(255,255,255,0.9);
-  border-radius: 10px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+	position: relative;
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+	overflow: hidden;
+	background: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(5px);
+	border-radius: 10px;
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .carrusel-inner {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+	display: flex;
+	transition: transform 0.5s ease-in-out;
 }
 
 /* Cada empresa ocupa 100% del ancho del carrusel */
 .empresa {
-  min-width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* dos columnas iguales */
-  align-items: center;
-  gap: 0;
-  height: 100%;
+	min-width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	/* dos columnas iguales */
+	align-items: center;
+	gap: 0;
+	height: 100%;
 }
 
 /* Columna izquierda: imagen */
 .empresa__imagen {
-  display: flex;
-  align-items: center;
-  justify-content: center;
- 
-  height: 100%;
-  padding: 40px; /* crea el margen alrededor de la imagen */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	height: 100%;
+	padding: 40px;
+	/* crea el margen alrededor de la imagen */
 }
 
 .empresa__imagen img {
-  width: 80%;           /* la imagen no llena todo el espacio */
-  height: auto;
-  object-fit: contain;  /* mantiene proporciones */
-  border-radius: 12px;  /* opcional: bordes suaves */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-  background: white;    /* fondo blanco si la imagen tiene transparencia */
+	width: 80%;
+	/* la imagen no llena todo el espacio */
+	height: auto;
+	object-fit: contain;
+	/* mantiene proporciones */
+	border-radius: 12px;
+	/* opcional: bordes suaves */
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+	background: white;
+	/* fondo blanco si la imagen tiene transparencia */
 }
+
 /* Columna derecha: información */
 .empresa__info {
-  padding: 40px;
-  text-align: left;
+	padding: 40px;
+	text-align: left;
 }
+
 .empresa__info h3 {
-  font-size: 2rem;
-  margin: 0 0 10px 0;
-  color: #0b4d8a;
+	font-size: 2rem;
+	margin: 0 0 10px 0;
+	color: #0b4d8a;
 }
+
 .empresa__info p {
-  margin: 4px 0;
-  font-size: 1.1rem;
-  color: #2f4b6b;
+	margin: 4px 0;
+	font-size: 1.1rem;
+	color: #2f4b6b;
 }
 
 /* Botones */
 .botones {
-  margin-top: 16px;
-  display: flex;
-  gap: 10px;
+	margin-top: 16px;
+	display: flex;
+	gap: 10px;
 }
+
 .btn {
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
+	padding: 10px 16px;
+	border-radius: 8px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.2s ease;
 }
+
 .btn-primary {
-  background: #0b4d8a;
-  color: #fff;
-  border: none;
+	background: #0b4d8a;
+	color: #fff;
+	border: none;
 }
-.btn-primary:hover { background: #083866; }
+
+.btn-primary:hover {
+	background: #083866;
+}
 
 .btn-outline {
-  background: transparent;
-  border: 1px solid #0b4d8a;
-  color: #0b4d8a;
+	background: transparent;
+	border: 1px solid #0b4d8a;
+	color: #0b4d8a;
 }
+
 .btn-outline:hover {
-  background: #0b4d8a;
-  color: #fff;
+	background: #0b4d8a;
+	color: #fff;
 }
 
 /* Flechas del carrusel */
 .boton {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #163b8d;
-  color: white;
-  border: none;
-  padding: 10px 14px;
-  cursor: pointer;
-  border-radius: 50%;
-  z-index: 2;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: #163b8d;
+	color: white;
+	border: none;
+	padding: 10px 14px;
+	cursor: pointer;
+	border-radius: 50%;
+	z-index: 2;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
-.prev { left: 10px; }
-.next { right: 10px; }
-.boton:hover { background-color: #0b3a75; }
+
+.prev {
+	left: 10px;
+}
+
+.next {
+	right: 10px;
+}
+
+.boton:hover {
+	background-color: #0b3a75;
+}
 
 /* Responsive: apilar en pantallas pequeñas */
 @media (max-width: 760px) {
-  .empresa {
-    grid-template-columns: 1fr;
-  }
-  .empresa__info {
-    text-align: center;
-    padding: 20px;
-  }
-  .botones {
-    justify-content: center;
-  }
+	.empresa {
+		grid-template-columns: 1fr;
+	}
+
+	.empresa__info {
+		text-align: center;
+		padding: 20px;
+	}
+
+	.botones {
+		justify-content: center;
+	}
 }
