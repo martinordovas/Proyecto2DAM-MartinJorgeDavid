@@ -4,7 +4,7 @@ body {
 }
 
 #navbarPaginaPrincipal {
-	background-color: rgba(255, 255, 255, 0.8);
+	background-color: rgba(255, 255, 255, 0.6);
 	backdrop-filter: blur(8px);
 	border-bottom: 3px solid rgba(22, 59, 141);
 }
