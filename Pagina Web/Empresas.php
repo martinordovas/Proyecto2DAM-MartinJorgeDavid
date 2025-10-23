@@ -28,7 +28,7 @@
                 <ul class="navbar-nav ms-auto">
                     <!--El "nav-item" de momento no hace nada, si acaba así, borrarlo antes de entregarlo-->
                     <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="inicio_sesion.html" class="nav-link">Iniciar sesi&oacute;n</a></li>
+                    <li class="nav-item"><a href="inicio_sesion.php" class="nav-link">Iniciar sesi&oacute;n</a></li>
                 </ul>
             </div>
         </div>
@@ -45,7 +45,7 @@
 				<ul class="navbar-nav ms-auto">
 					<!--El "nav-item" de momento no hace nada, si acaba así, borrarlo antes de entregarlo-->
 					<li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-					<li class="nav-item"><a href="inicio_sesion.html" class="nav-link">Iniciar sesi&oacute;n</a></li>
+					<li class="nav-item"><a href="inicio_sesion.php" class="nav-link">Iniciar sesi&oacute;n</a></li>
 				</ul>
 			</div>
 		</div>
