@@ -80,14 +80,14 @@ body {
     background-color: #163b8d;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-    margin: 40px;
+    margin: 20px;
     padding: 30px;
     overflow: hidden;
 }
 
 .quienesSomos img{
     margin-top: 40px;
-    width: 75%;
+    width: 80%;
     height: 400px;
     object-fit: cover;
     border-radius: 10px;
@@ -319,3 +319,43 @@ body {
     text-decoration: underline;
     
 }
+
+.contenedores-principales {
+  padding: 40px 0;
+  gap: 20px; /* espacio entre contenedores */
+  margin-left: 40px;
+  margin-right: 40px;
+  overflow: hidden; 
+}
+
+.contenedor-individual {
+  background-color: #fdfeff;
+  color: #163b8d;
+  border-radius: 15px;
+  padding: 30px;
+  flex: 1 1 30%; 
+  min-width: 280px; 
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 150px;
+}
+
+.contenedor-individual:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.5);
+}
+
+.contenedor-individual .btn {
+  border-radius: 10px;
+  font-weight: bold;
+  color: #163b8d;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.contenedor-individual .btn:hover {
+  background-color: #112e6e;
+  color: white;
+}
+
