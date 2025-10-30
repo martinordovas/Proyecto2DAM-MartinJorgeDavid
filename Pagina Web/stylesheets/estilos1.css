@@ -60,6 +60,7 @@ body {
 #navbarPaginaPrincipal.cambioNavbar .nav-link {
     color: rgba(22, 59, 141) !important;
     text-shadow: none;
+    /*hola*/
 }
 
 #navbarPaginaPrincipal.cambioNavbar .nav-link:hover {
