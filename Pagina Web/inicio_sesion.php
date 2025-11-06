@@ -13,19 +13,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg fixed-top navegacion">
-            <div class="container-fluid">
-                <img src="logo-arlep-minusculas.png" alt="Logo de La Salle" width="100px"/>
-                <ul class="navbar-nav ms-auto">
-                    <li ><a href="index.html" class="nav-link texto">Inicio</a></li>
-                    <li ><a href="Empresas.php" class="nav-link texto">Empresas</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="fondo">
-
 </head>
 
 <body>
@@ -34,7 +21,7 @@
             <img src="logo-arlep-minusculas.png" alt="Logo de La Salle" width="100px" />
             <ul class="navbar-nav ms-auto">
                 <li><a href="index.html" class="nav-link texto">Inicio</a></li>
-                <li><a href="Empresas.html" class="nav-link texto">Empresas</a></li>
+                <li><a href="Empresas.php" class="nav-link texto">Empresas</a></li>
             </ul>
         </div>
     </nav>
