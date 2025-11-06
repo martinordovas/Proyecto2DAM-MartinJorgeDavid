@@ -26,18 +26,18 @@
         </div>
     </nav>
     <div class="fondo">
-
         <div class="contenido">
             <div class="formularioInicioSesion"> <!--id="formularioContenedor"-->
                 <form id="">
-                    <h2 class="text-center text-white mb-4">Accede a la Feria 2025</h2>
+                    <h2 class="text-center text-white mb-3">Accede a la Feria 2025</h2>
+                    <h4 class="text-center text-white mb-4">Bienvenido a La Salle Business Match</h4>
                     <div class="mb-3">
-                        <input type="email" class="form-control" placeholder="Correo electr&oacute;nico">
+                        <input type="email" class="form-control" placeholder="Correo electr&oacute;nico corporativo">
                     </div>
                     <div class="mb-4">
                         <input type="password" class="form-control" placeholder="Contrase&#241;a">
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Iniciar sesi&oacute;n</button>
+                    <button type="submit" class="btn btn-primary w-100"><a href="index.html" class="nav-link">Iniciar sesi&oacute;n</a></button>
                     <a class="registrarse" href="formulario.php">¿Eres nuevo? Regístrate </a>
                 </form>
             </div>
