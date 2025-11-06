@@ -10,14 +10,14 @@ body {
     transform: translate(-50%, -50%);
     z-index: 10;
     width: 90%;
-    max-width: 600px;
+    max-width: 1024px;
     text-align: center;
 }
 
 .formularioInicioSesion {
     background-color: rgba(22, 59, 141, 0.85);
     backdrop-filter: blur(4px);
-    padding: 50px;
+    padding: 35px;
     border-radius: 15px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
@@ -25,6 +25,11 @@ body {
 .form-control, .btn {
     border-radius: 10px;
     height:45px;
+}
+
+.form-control2 {
+    height:97px;
+    resize:none;
 }
 
 .fondo{
@@ -52,7 +57,6 @@ body {
     background-color: #0b4b8a;
 }
 
-
 .registrarse{
     color:white;
     margin-top: 25px;
@@ -60,6 +64,20 @@ body {
     text-decoration: none;
     display:block
 }
+
 .registrarse:hover{
     text-decoration: underline;
+}
+
+.cuadro{
+    background-color:rgba(13, 110, 253);
+    border-radius: 10px;
+}
+
+.margen2{
+    margin-left:-20px;
+}
+
+.margen1{
+    margin-left: 10px;
 }
