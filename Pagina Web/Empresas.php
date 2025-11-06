@@ -18,113 +18,29 @@
 
 <body class="bg-dark">
 
-  
-    <!-- <nav id="navbarPaginaPrincipal" class="navbar shadow-lg bg-light navbar-expand-lg fixed-top"> -->
-    <nav id="navbarPaginaPrincipal" class="navbar navbar-expand-lg fixed-top">
-      
+  	<nav id="navbarPaginaPrincipal" class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <div class="navbar-collapse">
                 <img src="logo-arlep-minusculas.png" alt="Logo de La Salle" width="100px">
-                <ul class="navbar-nav ms-auto">
-                    <!--El "nav-item" de momento no hace nada, si acaba así, borrarlo antes de entregarlo-->
+                <ul class="navbar-nav ms-auto">                    
                     <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
                     <li class="nav-item"><a href="inicio_sesion.php" class="nav-link">Iniciar sesi&oacute;n</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    
-        
-        
+	<section class="fondo">
+		<div class="buscarEmpresa">
+			<div class="recuadroBuscar">
 
-	<!-- <nav id="navbarPaginaPrincipal" class="navbar shadow-lg bg-light navbar-expand-lg fixed-top"> -->
-	<nav id="navbarPaginaPrincipal" class="navbar navbar-expand-lg fixed-top">
-		<div class="container-fluid">
-			<div class="navbar-collapse">
-				<img src="logo-arlep-minusculas.png" alt="Logo de La Salle" width="100px">
-				<ul class="navbar-nav ms-auto">
-					<!--El "nav-item" de momento no hace nada, si acaba así, borrarlo antes de entregarlo-->
-					<li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
-					<li class="nav-item"><a href="inicio_sesion.php" class="nav-link">Iniciar sesi&oacute;n</a></li>
-				</ul>
 			</div>
 		</div>
-	</nav>
-	<section>
-		<div class="fondo">
-			<div class="carrusel">
-				<div class="carrusel-inner">
-					<!-- Empresa 1 -->
-					<div class="empresa">
-						<div class="empresa__imagen">
-							<img src="images/logo1.jpeg" alt="Empresa 1">
-						</div>
-						<div class="empresa__info">
-							<h3>Empresa 1</h3>
-							<p>Industria: Tecnología</p>
-							<p>Ubicación: Madrid</p>
-							<div class="botones">
-
-
-								<a href="https://www.youtube.com" target="_blank" class="btn btn-outline">Ver más</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Empresa 2 -->
-					<div class="empresa">
-						<div class="empresa__imagen">
-							<img src="images/logo2.jpeg" alt="Empresa 2">
-						</div>
-						<div class="empresa__info">
-							<h3>Empresa 2</h3>
-							<p>Industria: Finanzas</p>
-							<p>Ubicación: Barcelona</p>
-							<div class="botones">
-
-								<a href="https://www.youtube.com" target="_blank" class="btn btn-outline">Ver más</a>
-							</div>
-						</div>
-					</div>
-
-					<!-- Empresa 3 -->
-					<div class="empresa">
-						<div class="empresa__imagen">
-							<img src="images/logo3.jpeg" alt="Empresa 3">
-						</div>
-						<div class="empresa__info">
-							<h3>Empresa 3</h3>
-							<p>Industria: Salud</p>
-							<p>Ubicación: Valencia</p>
-							<div class="botones">
-
-								<a href="https://www.youtube.com" target="_blank" class="btn btn-outline">Ver más</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<button class="boton prev" aria-label="Anterior">&#10094;</button>
-				<button class="boton next" aria-label="Siguiente">&#10095;</button>
+		<div class="todasEmpresas">
+			<div class="recuadroEmpresas">
+				
 			</div>
 		</div>
 	</section>
-	<script src="script.js"></script>
-	<script>
-		const inner = document.querySelector('.carrusel-inner');
-		const empresas = document.querySelectorAll('.empresa');
-		let index = 0;
-
-		document.querySelector('.next').addEventListener('click', () => {
-			index = (index + 1) % empresas.length;
-			inner.style.transform = `translateX(-${index * 100}%)`;
-		});
-
-		document.querySelector('.prev').addEventListener('click', () => {
-			index = (index - 1 + empresas.length) % empresas.length;
-			inner.style.transform = `translateX(-${index * 100}%)`;
-		});
-	</script>
 </body>
 
 </html>
