@@ -51,7 +51,7 @@
                         <input type="password" class="form-control" placeholder="Contrase&#241;a">
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Iniciar sesi&oacute;n</button>
-                    <a class="registrarse" href="formulario.html">¿Eres nuevo? Regístrate </a>
+                    <a class="registrarse" href="formulario.php">¿Eres nuevo? Regístrate </a>
                 </form>
             </div>
         </div>
