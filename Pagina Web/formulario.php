@@ -20,7 +20,7 @@
         <div class="container-fluid">
             <img src="logo-arlep-minusculas.png" alt="Logo de La Salle" width="100px" />
             <ul class="navbar-nav ms-auto">
-                <li><a href="index.html" class="nav-link texto">Inicio</a></li>
+                <li><a href="index.php" class="nav-link texto">Inicio</a></li>
                 <li><a href="Empresas.php" class="nav-link texto">Empresas</a></li>
             </ul>
         </div>
@@ -28,25 +28,25 @@
     <div class="fondo">
         <div class="contenido">
             <div class="formularioInicioSesion"> <!--id="formularioContenedor"-->
-                <form id="">
+                <form action="scriptsphp/registrarDatos.php" method="post" id="">
                     <h2 class="text-center text-white mb-4">Ingrese sus datos</h2>
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="mb-3">
-                                    <input type="" class="form-control" placeholder="Nombre de la empresa" required/>
+                                    <input type="text" id="nombreEmpresa" name="nombreEmpresa" class="form-control" placeholder="Nombre de la empresa" required/>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="email" class="form-control" placeholder="Correo electr&oacute;nico" required/>
+                                    <input type="email" id="correoEmpresa" name="correoEmpresa" class="form-control" placeholder="Correo electr&oacute;nico" required/>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="password" class="form-control" placeholder="Contrase&#241;a" required/>
+                                    <input type="password" id="passwordEmpresa" name="passwordEmpresa" class="form-control" placeholder="Contrase&#241;a" required/>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="url" class="form-control" placeholder="Tu p&aacute;gina web" required/>
+                                    <input type="url" id="enlaceWeb" name="enlaceWeb" class="form-control" placeholder="Tu p&aacute;gina web" required/>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="url" class="form-control" placeholder="URL Meet" required/>
+                                    <input type="url" id="enlaceMeet" name="enlaceMeet" class="form-control" placeholder="URL Meet" required/>
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -60,14 +60,14 @@
                                                 <h5 class="margen2">Horario de</h5>
                                             </div>
                                             <div class="col-1">
-                                                <input type="time" class="" required/>
+                                                <input type="time" id="horarioEmpresaAM1" name="horarioEmpresaAM1" class="" required/>
                                             </div>
                                             <div class="col-2"></div>
                                             <div class="col-1">
                                                 <h5>a</h5>
                                             </div>
                                             <div class="col-2">
-                                                <input type="time" class="" required/>
+                                                <input type="time" id="horarioEmpresaAM2" name="horarioEmpresaAM2" class="" required/>
                                             </div>
                                             <div class="col-1"></div>
                                             <div class="col-2">
@@ -80,14 +80,14 @@
                                                 <h5 class="margen2">Horario de</h5>
                                             </div>
                                             <div class="col-1">
-                                                <input type="time" class="" required/>
+                                                <input type="time" id="horarioEmpresaPM1" name="horarioEmpresaPM1" class="" required/>
                                             </div>
                                             <div class="col-2"></div>
                                             <div class="col-1">
                                                 <h5>a</h5>
                                             </div>
                                             <div class="col-2">
-                                                <input type="time" class="" required/>
+                                                <input type="time" id="horarioEmpresaPM2" name="horarioEmpresaPM2" class="" required/>
                                             </div>
                                             <div class="col-1"></div>
                                             <div class="col-2">
@@ -97,11 +97,11 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <textarea class="form-control form-control2" placeholder="Descripción de tus productos / servicios" required></textarea>
+                                    <textarea id="descripcionEmpresa" name="descripcionEmpresa" class="form-control form-control2" placeholder="Descripción de tus productos / servicios" required></textarea>
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+                        <button id="botonEnviar" name="botonEnviar" type="submit" class="btn btn-primary w-100">Registrarse</button>
                     </div>
                 </form>
             </div>

@@ -23,7 +23,7 @@
             <div class="navbar-collapse">
                 <img src="logo-arlep-minusculas.png" alt="Logo de La Salle" width="100px">
                 <ul class="navbar-nav ms-auto">                    
-                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="index.php" class="nav-link">Inicio</a></li>
                     <li class="nav-item"><a href="inicio_sesion.php" class="nav-link">Iniciar sesi&oacute;n</a></li>
                 </ul>
             </div>
