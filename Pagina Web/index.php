@@ -150,7 +150,7 @@ if (isset($_SESSION['mensaje'])) {
                     <div class="col-12 row2">
                         <div class="ratio ratio-16x9">
                             <iframe class="video_centrada"
-                                src="https://www.youtube.com/embed/cG7cRDcPY3k?si=Er3714yu9xHQZq2y"
+                                src="https://www.youtube.com/embed/LXb3EKWsInQ?si=Me5Sonmhj0pppGIe"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>

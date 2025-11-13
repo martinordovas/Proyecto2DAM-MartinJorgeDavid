@@ -1,6 +1,6 @@
 <?php
-$host = "localhost";
-$baseDatos = "lsbmgrupo3";
+$host = "172.26.10.1";
+$baseDatos = "LSBMGrupo3";
 $usuario = "registros";
 $pass = "accesoBD2025grupo3";
 $conexion = mysqli_connect($host, $usuario, $pass, $baseDatos);
