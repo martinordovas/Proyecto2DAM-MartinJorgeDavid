@@ -255,7 +255,7 @@ body {
 }
 
 .col1 img {
-    height: 250px;
+    width: 100%;
     border-radius: 10px;
 }
 
