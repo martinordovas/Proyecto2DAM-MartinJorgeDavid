@@ -33,6 +33,24 @@ body {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
+.formularioInicioSesion2 {
+    background-color: rgba(22, 59, 141, 0.85);
+    backdrop-filter: blur(4px);
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width:756px){
+    .formularioInicioSesion{
+        margin-top:100px;
+    }
+    .formularioInicioSesion2{
+        margin-top:550px;
+        margin-bottom:50px;
+    }
+}
+
 .form-control, .btn {
     border-radius: 10px;
     height:45px;
@@ -43,12 +61,10 @@ body {
     resize:none;
 }
 
-.fondo{
-    position: relative;
-    height: 100vh;
-    background-image: url('../images/fotoEjemploFondo2.jpg');
-    background-size: cover;
-    background-position: center;
+.fondoPagina{
+    position:fixed;
+    width:2000px;
+    height:900px;
 }
 
 .navegacion{
@@ -91,4 +107,3 @@ body {
 
 .margen1{
     margin-left: 10px;
-}

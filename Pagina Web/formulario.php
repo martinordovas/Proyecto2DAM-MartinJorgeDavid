@@ -8,6 +8,7 @@
     <!-- Stylesheets -->
     <link rel='stylesheet' type='text/css' media='screen' href='bootstrap/css/bootstrap.min.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='stylesheets/inicio_sesion.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='stylesheets/estilos1.css'>
     <!-- Fuente Montserrat de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,18 +17,21 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top navegacion">
+    <nav id="navbarPaginaPrincipal" class="navbar navbar-expand fixed-top">
         <div class="container-fluid">
-            <img src="logo-arlep-minusculas.png" alt="Logo de La Salle" width="100px" />
-            <ul class="navbar-nav ms-auto">
-                <li><a href="index.php" class="nav-link texto">Inicio</a></li>
-                <li><a href="Empresas.php" class="nav-link texto">Empresas</a></li>
-            </ul>
+            <img src="logo-arlep-minusculas.png" alt="Logo de La Salle" width="100px">
+            <div class="" id="menuNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="index.php" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="Empresas.php" class="nav-link">Empresa ganadora</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <div class="fondo">
+    <img class="fondoPagina" src="images/fondo.png" alt="Fondo de la página">
+    <div>
         <div class="contenido">
-            <div class="formularioInicioSesion"> <!--id="formularioContenedor"-->
+            <div class="formularioInicioSesion2"> <!--id="formularioContenedor"-->
                 <form action="scriptsphp/registrarDatos.php" method="post" id="">
                     <h2 class="text-center text-white mb-4">Ingrese sus datos</h2>
                     <div class="container-fluid">
@@ -106,6 +110,7 @@
                 </form>
             </div>
         </div>
+        
 </body>
 
 </html>
