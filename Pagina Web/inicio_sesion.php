@@ -26,7 +26,7 @@
         </div>
     </nav>
     <div class="fondo">
-        <div class="contenido">
+        <div class="contenido2">
             <div class="formularioInicioSesion"> <!--id="formularioContenedor"-->
                 <form action="scriptsphp/iniciarSesion.php" id="">
                     <h2 class="text-center text-white mb-3">Accede a la Feria 2025</h2>
