@@ -322,11 +322,11 @@ body {
     padding-left: 5px;
     padding-right: 5px;
     padding-bottom: 10px;
-
+    transition: color 0.5s ease;
 }
 
 .ajustarIcono:hover {
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
     color: yellow;
 }
 
@@ -334,12 +334,12 @@ body {
     color: inherit;
     color: white;
     text-decoration: none;
+    transition: text-decoration 0.5s ease, color 0.5s ease;
 }
 
 .ajustarEnlaces:hover {
-    transition: color 0.3s ease;
-    text-decoration: underline;
-
+    transition: text-decoration 0.5s ease, color 0.5s ease;
+    color: yellow;
 }
 
 .contenedores-principales {
@@ -382,4 +382,31 @@ body {
     color: white;
     box-shadow: 0px 0px 10px rgb(97, 92, 255);
     transform: scale(1.1);
+}
+
+.contenedor-individual.ocultar{
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: none;
+}
+
+#contenedorDescarga1.contenedor-individual.aparecer{
+    visibility: visible;
+    opacity: 0;
+    animation: fade-in-up 0.8s ease-out forwards;
+}
+
+#contenedorDescarga2.contenedor-individual.aparecer{
+    visibility: visible;
+    opacity: 0;
+    animation: fade-in-up 0.8s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+#contenedorDescarga3.contenedor-individual.aparecer{
+    visibility: visible;
+    opacity: 0;
+    animation: fade-in-up 0.8s ease-out forwards;
+    animation-delay: 0.8s;
 }

@@ -94,17 +94,17 @@ if (isset($_SESSION['mensaje'])) {
     <article>
         <div class="contenedores-principales d-flex justify-content-between flex-wrap">
 
-            <div class="contenedor-individual col-box">
+            <div class="contenedor-individual ocultar col-box" id="contenedorDescarga1">
                 <h4><b>Descarga 1</b></h4>
                 <a href="https://www.google.es" class="btn btn-light mt-3" target="_blank">Enlace 1</a>
             </div>
 
-            <div class="contenedor-individual col-box">
+            <div class="contenedor-individual ocultar col-box" id="contenedorDescarga2">
                 <h4><b>Descarga 2</b></h4>
                 <a href="https://www.google.es" class="btn btn-light mt-3" target="_blank">Enlace 2</a>
             </div>
 
-            <div class="contenedor-individual col-box">
+            <div class="contenedor-individual ocultar contenedorDescarga3 col-box" id="contenedorDescarga3">
                 <h4><b>Descarga 3</b></h4>
                 <a href="https://www.google.es" class="btn btn-light mt-3" target="_blank">Enlace 3</a>
             </div>

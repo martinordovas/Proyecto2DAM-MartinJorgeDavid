@@ -44,6 +44,9 @@ function aparecerRecuadro(nombre, altura) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    aparecerRecuadro("quienesSomos", -200);
-    aparecerRecuadro("contenedor", -200);
+    aparecerRecuadro("quienesSomos", -100);
+    aparecerRecuadro("contenedor", -100);
+    aparecerRecuadro("contenedorDescarga1", -200);
+    aparecerRecuadro("contenedorDescarga2", -200);
+    aparecerRecuadro("contenedorDescarga3", -200);
 });
