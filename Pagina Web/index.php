@@ -7,6 +7,13 @@ if (isset($_SESSION['mensaje'])) {
     $mensaje = $_SESSION['mensaje'];
     unset($_SESSION['mensaje']);
 }
+if(isset($_SESSION['usuario'])){
+    $usuario = $_SESSION['usuario'];
+    unset($_SESSION['usuario']);
+}
+else {
+    $usuario = null;
+}
 ?>
 <html>
 
@@ -27,9 +34,39 @@ if (isset($_SESSION['mensaje'])) {
 </head>
 
 <body class="cuadroInterior">
+    <div aria-live="polite" aria-atomic="true" class="position-relative">
+        <div id="toastContainer" class="toast-container position-fixed top-4 end-4 p-3" style="z-index: 1080;">
+            <?php if ($mensaje == "Ha iniciado sesión. Bienvenid@."): ?>
+                <div id="liveToast" class="toast text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="d-flex">
+                        <div class="toast-body">
+                            <?= htmlspecialchars($mensaje) ?>
+                        </div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                </div>
+            <?php endif; ?>
+            <?php if ($mensaje == "Usuario y/o contraseña incorrectos."): ?>
+                <div id="liveToast" class="toast text-white bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="d-flex">
+                        <div class="toast-body">
+                            <?= htmlspecialchars($mensaje) ?>
+                        </div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
     <nav id="navbarPaginaPrincipal" class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <img src="logo-arlep-minusculas.png" alt="Logo de La Salle" width="100px">
+            <?php if($usuario):?>
+                <span class="navbar-text d-flex align-items-center my-0 align-self-center ps-3 me-3 emailUsuario" style="font-weight: 500; line-height: 1;">
+                    <i class="bi bi-person-circle me-1 fs-5" style="color: inherit; color: rgba(22, 59, 141);"></i>
+                    <?= htmlspecialchars($usuario) ?>
+                </span>
+            <?php endif; ?>
             <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar"
                 aria-controls="menuNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -41,6 +78,9 @@ if (isset($_SESSION['mensaje'])) {
                     <li class="nav-item"><a href="nosotros.html" class="nav-link">Sobre nosotros</a></li>
                     <li class="nav-item"><a href="#contenedor" class="nav-link">Empresa ganadora</a></li>
                     <li class="nav-item"><a href="inicio_sesion.php" id="enlaceFormulario" class="nav-link">Iniciar
+                            sesi&oacute;n</a>
+                    </li>
+                    <li class="nav-item"><a href="scriptsphp/cerrarSesion.php" id="enlaceCerrarSesion" class="nav-link">Cerrar
                             sesi&oacute;n</a>
                     </li>
                     <li class="nav-item"><a href="Empresas.php" class="nav-link">Empresas</a></li>

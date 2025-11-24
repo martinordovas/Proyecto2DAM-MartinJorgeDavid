@@ -1,5 +1,5 @@
 <?php
-$host = "172.26.10.1";
+$host = "localhost";
 $baseDatos = "LSBMGrupo3";
 $usuario = "registros";
 $pass = "accesoBD2025grupo3";

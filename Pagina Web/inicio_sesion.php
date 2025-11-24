@@ -32,7 +32,7 @@
     <div>
         <div class="contenido2">
             <div class="formularioInicioSesion"> <!--id="formularioContenedor"-->
-                <form action="scriptsphp/iniciarSesion.php" id="">
+                <form action="scriptsphp/iniciarSesion.php" id="" method="POST">
                     <h2 class="text-center text-white mb-3">Accede a la Feria 2025</h2>
                     <h4 class="text-center text-white mb-4">Bienvenido a La Salle Business Match</h4>
                     <div class="mb-3">
@@ -41,7 +41,7 @@
                     <div class="mb-4">
                         <input id="passwordInicioSesion" name="passwordInicioSesion" type="password" class="form-control" placeholder="Contrase&#241;a">
                     </div>
-                    <button id="botonIniciarSesion" name="botonIniciarSesion" type="submit" class="btn btn-primary w-100"><a href="index.html" class="nav-link">Iniciar sesi&oacute;n</a></button>
+                    <button id="botonIniciarSesion" name="botonIniciarSesion" type="submit" class="btn btn-primary w-100">Iniciar sesi&oacute;n</button>
                     <a class="registrarse" href="formulario.php">¿Eres nuevo? Regístrate </a>
                 </form>
             </div>

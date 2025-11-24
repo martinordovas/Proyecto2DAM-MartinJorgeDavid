@@ -63,6 +63,11 @@ body {
         color 0.5s ease, 
         background-color 0.5s ease;
 }
+
+.emailUsuario{
+    color: rgba(22, 59, 141) !important;
+    align-items: center;
+}
 /*Comentado para quitar la animacion del navbar*/
 /*
 .cambioNavbar {
