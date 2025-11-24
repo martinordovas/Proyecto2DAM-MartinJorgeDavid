@@ -9,7 +9,6 @@ if (isset($_SESSION['mensaje'])) {
 }
 if(isset($_SESSION['usuario'])){
     $usuario = $_SESSION['usuario'];
-    unset($_SESSION['usuario']);
 }
 else {
     $usuario = null;
@@ -64,7 +63,7 @@ else {
             <?php if($usuario):?>
                 <span class="navbar-text d-flex align-items-center my-0 align-self-center ps-3 me-3 emailUsuario" style="font-weight: 500; line-height: 1;">
                     <i class="bi bi-person-circle me-1 fs-5" style="color: inherit; color: rgba(22, 59, 141);"></i>
-                    <?= htmlspecialchars($usuario) ?>
+                    <?= htmlspecialchars($usuario) ?> 
                 </span>
             <?php endif; ?>
             <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar"
@@ -75,7 +74,7 @@ else {
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a href="#carruselFotos" class="nav-link">Inicio</a></li>
                     <li class="nav-item"><a href="#quienesSomos" class="nav-link">Feria</a></li>
-                    <li class="nav-item"><a href="nosotros.html" class="nav-link">Sobre nosotros</a></li>
+                    <li class="nav-item"><a href="nosotros.php" class="nav-link">Sobre nosotros</a></li>
                     <li class="nav-item"><a href="#contenedor" class="nav-link">Empresa ganadora</a></li>
                     <li class="nav-item"><a href="inicio_sesion.php" id="enlaceFormulario" class="nav-link">Iniciar
                             sesi&oacute;n</a>
@@ -234,6 +233,7 @@ else {
     </footer>
     <script src='bootstrap/js/bootstrap.bundle.js'></script>
     <script src="javascripts/script1.js"></script>
+    <script src="javascripts/gestionarCookies.js"></script>
 </body>
 
 </html>

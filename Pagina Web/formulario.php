@@ -23,12 +23,11 @@
             <div class="" id="menuNavbar">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a href="index.php" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="Empresas.php" class="nav-link">Empresa ganadora</a></li>
+                    <li class="nav-item"><a href="Empresas.php" class="nav-link">Empresas</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <img class="fondoPagina" src="images/fondo.png" alt="Fondo de la página">
     <div>
         <div class="contenido">
             <div class="formularioInicioSesion2"> <!--id="formularioContenedor"-->

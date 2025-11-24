@@ -28,7 +28,6 @@
             </div>
         </div>
     </nav>
-    <img class="fondoPagina" src="images/fondo.png" alt="Fondo de la página">
     <div>
         <div class="contenido2">
             <div class="formularioInicioSesion"> <!--id="formularioContenedor"-->

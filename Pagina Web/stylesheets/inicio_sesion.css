@@ -1,6 +1,15 @@
 body {
     font-family: 'Montserrat', sans-serif;
     color: white;
+    background-color: #0a1a3b;
+    background-image: url(../images/imagen_centro_login.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
 }
 
 .contenido {
@@ -61,12 +70,6 @@ body {
     resize:none;
 }
 
-.fondoPagina{
-    position:fixed;
-    width:2000px;
-    height:900px;
-}
-
 .navegacion{
     background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(8px);
@@ -107,3 +110,4 @@ body {
 
 .margen1{
     margin-left: 10px;
+}

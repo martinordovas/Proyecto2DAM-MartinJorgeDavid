@@ -4,22 +4,35 @@ body {
 }
 
 #navbarPaginaPrincipal {
-	background-color: rgba(255, 255, 255, 0.6);
-	backdrop-filter: blur(8px);
-	border-bottom: 3px solid rgba(22, 59, 141);
+    background-color: rgba(255, 255, 255, 0.6) !important;
+    transition: background-color 0.5s ease;
+    /*Quitar estas ultimas linea para volver a como estaba antes de la animacion*/
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border-bottom: 3px solid rgba(22, 59, 141);
 }
 
 #navbarPaginaPrincipal .nav-link {
-	color: black;
-	border-radius: 10px;
-	transition: background-color 0.3s ease, color 0.3s ease;
-	font-weight: 600;
+	color: rgba(22, 59, 141) !important;
+    border-radius: 5px;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    font-weight: 600;
+	transition: 
+        box-shadow 0.5s ease, 
+        color 0.5s ease, 
+        background-color 0.5s ease;
 }
 
 #navbarPaginaPrincipal .nav-link:hover {
-	background-color: #0b4d8a;
-	color: white !important;
-	border-radius: 10px;
+	background-color: rgba(22, 59, 141, 0.7);
+    color: white !important;
+    text-shadow: 2px 2px 4px #000000;
+    box-shadow: 0px 0px 10px rgb(97, 92, 255);
+    transition: 
+        box-shadow 0.5s ease, 
+        color 0.5s ease, 
+        background-color 0.5s ease;
 }
 
 #navbarPaginaPrincipal .nav-link {
@@ -27,7 +40,10 @@ body {
 	border-radius: 10px;
 }
 
-
+.emailUsuario{
+	color: rgba(22, 59, 141) !important;
+    align-items: center;
+}
 
 /* Contenedor con fondo */
 .fondo {
@@ -145,48 +161,4 @@ body {
 .btn-outline:hover {
 	background: #0b4d8a;
 	color: #fff;
-}
-
-/* Flechas del carrusel */
-.boton {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	background-color:transparent;
-	color: #163b8d;
-	border: none;
-	padding: 10px 14px;
-	cursor: pointer;
-	border-radius: 50%;
-	z-index: 2;
-	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-}
-
-.prev {
-	left: 10px;
-}
-
-.next {
-	right: 10px;
-}
-
-.boton:hover {
-	background-color: #0b3a75;
-	color: white;
-}
-
-/* Responsive: apilar en pantallas pequeñas */
-@media (max-width: 760px) {
-	.empresa {
-		grid-template-columns: 1fr;
-	}
-
-	.empresa__info {
-		text-align: center;
-		padding: 20px;
-	}
-
-	.botones {
-		justify-content: center;
-	}
 }

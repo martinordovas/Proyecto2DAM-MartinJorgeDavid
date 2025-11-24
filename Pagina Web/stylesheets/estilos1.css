@@ -4,11 +4,16 @@ body {
 }
 
 .cuadroInterior {
-    /* background-color: white; */
-    /* background-image: url(../images/fondo.png); */
+    /* background-color: #0a1a3b;
+    background-image: url(../images/imagen_centro_login.png);
+    background-blend-mode: multiply; */
     background-color: #0a1a3b;
     background-image: url(../images/imagen_centro_login.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-blend-mode: multiply;
+    background-attachment: fixed;
 }
 
 #carruselFotos {
@@ -28,7 +33,7 @@ body {
 
 #navbarPaginaPrincipal {
     /*Para volver a poner animacion, background-color: transparent*/
-    background-color: rgba(255, 255, 255, 0.8) !important;
+    background-color: rgba(255, 255, 255, 0.6) !important;
     transition: background-color 0.5s ease;
     /*Quitar estas ultimas linea para volver a como estaba antes de la animacion*/
     backdrop-filter: blur(8px);
@@ -50,6 +55,10 @@ body {
     padding-left: 15px !important;
     padding-right: 15px !important;
     font-weight: 600;
+    transition: 
+        box-shadow 0.5s ease, 
+        color 0.5s ease, 
+        background-color 0.5s ease;
 }
 
 #navbarPaginaPrincipal .nav-link:hover {
