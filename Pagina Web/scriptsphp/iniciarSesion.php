@@ -10,11 +10,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST["botonIniciarSesion"])) {
             $emailInicioSesion = $_POST['emailInicioSesion'];
             $passwordInicioSesion = $_POST['passwordInicioSesion'];
-            $sql = "SELECT * FROM empresas_registradas WHERE correo_empresa = '$emailInicioSesion'";
-            $consulta = mysqli_query($conexion, $sql);
+            $sql = "SELECT * FROM empresas_registradas WHERE correo_empresa = ?";
+            $consulta = mysqli_prepare($conexion, $sql);
+            mysqli_stmt_bind_param($consulta, "s", $emailInicioSesion);
+            mysqli_stmt_execute($consulta);
             if ($consulta) {
-                $resultado = mysqli_fetch_array($consulta);
-                $passwordCifrada = $resultado['contrasenya'];
+                $resultado = mysqli_stmt_get_result($consulta);
+                $contrasenyaSacada = mysqli_fetch_assoc($resultado);
+                $passwordCifrada = $contrasenyaSacada['contrasenya'];
                 if (password_verify($passwordInicioSesion, $passwordCifrada)) {
                     $_SESSION['mensaje'] = "Ha iniciado sesión. Bienvenid@.";
                     $_SESSION['usuario'] = $emailInicioSesion;
@@ -27,11 +30,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 }
             }
             if ($consulta) {
+                mysqli_stmt_close($consulta);
                 header("Location: ../index.php");
             }
         }
         header("Location: ../index.php");
         exit;
+    }
+    if($conexion){
+        mysqli_close($conexion);
     }
 }
 else {

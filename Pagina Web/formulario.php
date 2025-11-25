@@ -14,13 +14,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
+    <link rel="icon" href="images/estrella.png" type="image/png">        
 </head>
 
 <body>
     <nav id="navbarPaginaPrincipal" class="navbar navbar-expand fixed-top">
         <div class="container-fluid">
-            <img src="logo-arlep-minusculas.png" alt="Logo de La Salle" width="100px">
-            <div class="" id="menuNavbar">
+            <img src="images/logoncm.png" alt="Logo de La Salle" width="60px">
+            <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar"
+                aria-controls="menuNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNavbar">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a href="index.php" class="nav-link">Inicio</a></li>
                     <li class="nav-item"><a href="Empresas.php" class="nav-link">Empresas</a></li>
@@ -31,7 +36,7 @@
     <div>
         <div class="contenido">
             <div class="formularioInicioSesion2"> <!--id="formularioContenedor"-->
-                <form action="scriptsphp/registrarDatos.php" method="post" id="">
+                <form action="scriptsphp/registrarDatos.php" method="post" enctype="multipart/form-data" id="">
                     <h2 class="text-center text-white mb-4">Ingrese sus datos</h2>
                     <div class="container-fluid">
                         <div class="row">
@@ -54,7 +59,8 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="mb-3 pb-2 pt-2 cuadro">
-                                    <h5 class="text-start text-center text-white">El logo de la empresa</h5><input type="file" class="form-control-sm" required></input>
+                                    <h5 class="text-start text-center text-white">El logo de la empresa</h5>
+                                    <input type="file" id="fotoEmpresa" name="fotoEmpresa" class="form-control-sm" required></input>
                                 </div>
                                 <div class="mb-3">
                                     <div class="container-fluid margen1">

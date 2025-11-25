@@ -23,13 +23,14 @@ else {
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link rel="icon" href="images/estrella.png" type="image/png">
 </head>
 
 <body class="bg-dark">
   	<nav id="navbarPaginaPrincipal" class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <div class="navbar-collapse">
-                <img src="logo-arlep-minusculas.png" alt="Logo de La Salle" width="100px">
+                <img src="images/logoncm.png" alt="Logo de La Salle" width="60px">
 				<?php if($usuario):?>
 					<span class="navbar-text d-flex align-items-center my-0 align-self-center ps-3 me-3 emailUsuario" style="font-weight: 500; line-height: 1;">
 						<i class="bi bi-person-circle me-1 fs-5" style="color: inherit; color: rgba(22, 59, 141);"></i>

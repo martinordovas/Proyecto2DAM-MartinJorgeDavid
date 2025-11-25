@@ -7,6 +7,27 @@ $conexion = mysqli_connect($host, $usuario, $pass, $baseDatos);
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conexion) {
         if (isset($_POST["botonEnviar"])) {
+            $directorio = "../fotosSubidas/";
+            $ruta_foto_bd = null;
+            if(isset($_FILES['fotoEmpresa'])){
+                $info_archivo = $_FILES['fotoEmpresa'];
+                $extension = strtolower(pathinfo($info_archivo['name'] , PATHINFO_EXTENSION));
+                $extensionesPermitidas = ['jpg', 'jpeg', 'png'];
+                if(in_array($extension, $extensionesPermitidas)){
+                    $nombreFichero = uniqid('logo_', true) . '.' . $extension;
+                    $rutaFichero = $directorio . $nombreFichero;
+                    if (move_uploaded_file($info_archivo['tmp_name'], $rutaFichero)) {
+                        $ruta_foto_bd = "../fotosSubidas/" . $nombreFichero; 
+                    } else {
+                        $_SESSION['mensaje'] = "Error al guardar el logo en el servidor.";
+                        header("Location: ../index.php"); 
+                        exit;
+                    }
+                }
+                else {
+                    $_SESSION['mensaje'] = "Extensión de imagen incorrecta.";
+                }
+            }
             $nombreEmpresa = trim($_POST['nombreEmpresa']);
             $correoEmpresa = filter_var($_POST['correoEmpresa'], FILTER_VALIDATE_EMAIL);
             $passwordEmpresa = $_POST['passwordEmpresa'];
@@ -36,24 +57,37 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         horario_am_fin, 
                         horario_pm_inicio, 
                         horario_pm_fin, 
-                        descripcion_empresa
+                        descripcion_empresa,
+                        ruta_foto
                     ) 
-                    VALUES ('$nombreEmpresa', 
-                        '$correoEmpresa', 
-                        '$passwordCifrada', 
-                        '$enlaceWebVerificada', 
-                        '$enlaceMeetVerificada', 
-                        '$horarioEmpresaAM1', 
-                        '$horarioEmpresaAM2', 
-                        '$horarioEmpresaPM1', 
-                        '$horarioEmpresaPM2', 
-                        '$descripcionEmpresa'
-                    )";
-            $consulta = mysqli_query($conexion, $sql);
-            if ($consulta) {
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            $consulta = mysqli_prepare($conexion, $sql);
+            mysqli_stmt_bind_param(
+                $consulta,
+                "sssssssssss",
+                $nombreEmpresa, 
+                $correoEmpresa, 
+                $passwordCifrada, 
+                $enlaceWebVerificada, 
+                $enlaceMeetVerificada, 
+                $horarioEmpresaAM1, 
+                $horarioEmpresaAM2, 
+                $horarioEmpresaPM1, 
+                $horarioEmpresaPM2, 
+                $descripcionEmpresa,
+                $ruta_foto_bd
+            );
+            $consultaFinal = mysqli_stmt_execute($consulta);
+            if ($consultaFinal) {
+                mysqli_stmt_close($consulta);
+                mysqli_close($conexion);
                 header("Location: ../index.php");
             }
+            mysqli_stmt_close($consulta);
         }
+    }
+    if($conexion){
+        mysqli_close($conexion);
     }
 }
 else {

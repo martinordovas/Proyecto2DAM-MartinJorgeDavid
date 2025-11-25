@@ -59,7 +59,7 @@ else {
     </div>
     <nav id="navbarPaginaPrincipal" class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-            <img src="logo-arlep-minusculas.png" alt="Logo de La Salle" width="100px">
+            <img src="images/logoncm.png" alt="Logo de La Salle" width="60px">
             <?php if($usuario):?>
                 <span class="navbar-text d-flex align-items-center my-0 align-self-center ps-3 me-3 emailUsuario" style="font-weight: 500; line-height: 1;">
                     <i class="bi bi-person-circle me-1 fs-5" style="color: inherit; color: rgba(22, 59, 141);"></i>
@@ -92,21 +92,6 @@ else {
             <div class="contenidoSuperpuesto">
                 <div id="tituloContenedor">
                     <h1 class="text-center"><b>Bienvenid@ a la feria de La Salle 2025</b></h1>
-                </div>
-                <div id="formularioContenedor" class="formularioCentral formularioOculto">
-                    <form id="formularioRegistro">
-                        <h2 class="text-center mb-3">Regístrate para la Feria 2025</h2>
-                        <div class="mb-3">
-                            <input type="text" class="form-control" placeholder="Nombre completo">
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Correo electrónico">
-                        </div>
-                        <div class="mb-3">
-                            <input type="password" class="form-control" placeholder="Contraseña">
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Registrarse</button>
-                    </form>
                 </div>
             </div>
             <div class="carousel-inner">
@@ -149,7 +134,6 @@ else {
             </div>
         </div>
     </article>
-
 
     <article>
         <div class="container-fluid">
