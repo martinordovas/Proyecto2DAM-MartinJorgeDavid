@@ -33,7 +33,7 @@ else {
 </head>
 
 <body class="cuadroInterior">
-    <div aria-live="polite" aria-atomic="true" class="position-relative">
+    <div class="position-relative">
         <div id="toastContainer" class="toast-container position-fixed top-4 end-4 p-3" style="z-index: 1080;">
             <?php if ($mensaje == "Ha iniciado sesión. Bienvenid@."): ?>
                 <div id="liveToast" class="toast text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
