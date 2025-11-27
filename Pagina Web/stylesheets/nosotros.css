@@ -1,0 +1,54 @@
+.bloqueInicial{
+    background-color: #163b8d;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    margin-top:100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 30px;
+}
+
+.persona{
+    background-color: rgba(38, 86, 192, 0.8);
+    border: 5px solid #163b8d;
+    border-color: #163b8d;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top:20px;
+}
+
+.persona h4{
+    margin-top:20px;
+}
+
+.imagenPersona{
+    width:100px;
+}
+
+.escuela{
+    background-color: rgba(38, 86, 192, 0.8);
+    border: 5px solid #163b8d;
+    border-color: #163b8d;
+    border-radius: 20px;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    padding:20px;
+}
+
+.imagenEscuela{
+    width:100%;
+    border-radius:20px;
+}
+
+.huecoTexto{
+    padding:50px;
+}
+
+.textoColegio{
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}

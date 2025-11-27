@@ -3,162 +3,106 @@ body {
 	color: white;
 }
 
-#navbarPaginaPrincipal {
-    background-color: rgba(255, 255, 255, 0.6) !important;
-    transition: background-color 0.5s ease;
-    /*Quitar estas ultimas linea para volver a como estaba antes de la animacion*/
-    backdrop-filter: blur(8px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    border-bottom: 3px solid rgba(22, 59, 141);
+h2.text-light {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    display: inline-block; /* opcional: ajusta el fondo solo al tamaño del texto */
+    padding: 5px 10px; /* opcional: añade un poco de espacio alrededor del texto */
+    border-radius: 4px; /* opcional: bordes redondeados */
 }
-
-#navbarPaginaPrincipal .nav-link {
-	color: rgba(22, 59, 141) !important;
-    border-radius: 5px;
-    padding-left: 15px !important;
-    padding-right: 15px !important;
-    font-weight: 600;
-	transition: 
-        box-shadow 0.5s ease, 
-        color 0.5s ease, 
-        background-color 0.5s ease;
-}
-
-#navbarPaginaPrincipal .nav-link:hover {
-	background-color: rgba(22, 59, 141, 0.7);
-    color: white !important;
-    text-shadow: 2px 2px 4px #000000;
-    box-shadow: 0px 0px 10px rgb(97, 92, 255);
-    transition: 
-        box-shadow 0.5s ease, 
-        color 0.5s ease, 
-        background-color 0.5s ease;
-}
-
-#navbarPaginaPrincipal .nav-link {
-	color: rgba(22, 59, 141);
-	border-radius: 10px;
-}
-
-.emailUsuario{
-	color: rgba(22, 59, 141) !important;
-    align-items: center;
-}
-
 /* Contenedor con fondo */
 .fondo {
-	position: relative;
-	height: 100vh;
-	background-image: url('../images/fotoEjemploFondo2.jpg');
-	background-size: cover;
-	background-position: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    position: relative;
+    min-height: 100vh; /* mejor min-height que height para permitir scroll */
+    background-image: url('../images/fotoEjemploFondo2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* << HACE QUE LA IMAGEN SIEMPRE QUEDE CENTRADA */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 150px; /* opcional si tienes navbar fijo */
 }
 
-.carrusel {
-	position: relative;
-	width: 100%;
-	max-width: 900px;
-	margin: 0 auto;
-	overflow: hidden;
-	background: rgba(255, 255, 255, 0.8);
-	backdrop-filter: blur(5px);
-	border-radius: 10px;
-	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+.empresa-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(4px);
+    border-radius: 14px;
+    padding: 12px;
+    min-height: 200px;
+    max-width: 230px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+	
 }
 
-.carrusel-inner {
-	display: flex;
-	transition: transform 0.5s ease-in-out;
+.empresa-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
 }
 
-/* Cada empresa ocupa 100% del ancho del carrusel */
-.empresa {
-	min-width: 100%;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	/* dos columnas iguales */
-	align-items: center;
-	gap: 0;
-	height: 100%;
+.card-title {
+    font-weight: 800;
 }
 
-/* Columna izquierda: imagen */
-.empresa__imagen {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	height: 100%;
-	padding: 40px;
-	/* crea el margen alrededor de la imagen */
+.card-text {
+    color:rgba(22, 59, 141);
+    margin-top: 10px;
+}
+.empresa-card img {
+    width: 100%;           /* ocupa todo el ancho del contenedor */
+    height: 120px;         /* altura fija para todas las imágenes */
+    object-fit: contain;   /* mantiene proporción sin recortar */
+    margin-bottom: 10px;   /* espacio debajo de la imagen */
 }
 
-.empresa__imagen img {
-	width: 80%;
-	/* la imagen no llena todo el espacio */
-	height: auto;
-	object-fit: contain;
-	/* mantiene proporciones */
-	border-radius: 12px;
-	/* opcional: bordes suaves */
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-	background: white;
-	/* fondo blanco si la imagen tiene transparencia */
+.empresa-web-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #0d6efd;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
-/* Columna derecha: información */
-.empresa__info {
-	padding: 40px;
-	text-align: left;
+.empresa-web-link:hover {
+    color: #084298;
+    text-decoration: underline;
+}
+.btn-contactar {
+    display: block;             /* hace que pueda centrarse con margin */
+    margin: 10px auto 0 auto;   /* 10px de espacio arriba, centrado horizontal */
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 25px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-.empresa__info h3 {
-	font-size: 2rem;
-	margin: 0 0 10px 0;
-	color: #0b4d8a;
+/* Efecto hover */
+.btn-contactar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+}
+/* Card body con espacio entre contenido y footer */
+.empresa-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.empresa__info p {
-	margin: 4px 0;
-	font-size: 1.1rem;
-	color: #2f4b6b;
-}
-
-/* Botones */
-.botones {
-	margin-top: 16px;
-	display: flex;
-	gap: 10px;
-}
-
-.btn {
-	padding: 10px 16px;
-	border-radius: 8px;
-	font-weight: 600;
-	cursor: pointer;
-	transition: all 0.2s ease;
-}
-
-.btn-primary {
-	background: #0b4d8a;
-	color: #fff;
-	border: none;
-}
-
-.btn-primary:hover {
-	background: #083866;
-}
-
-.btn-outline {
-	background: transparent;
-	border: 1px solid #0b4d8a;
-	color: #0b4d8a;
-}
-
-.btn-outline:hover {
-	background: #0b4d8a;
-	color: #fff;
+/* Footer que contiene botón y enlace */
+.empresa-card-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
