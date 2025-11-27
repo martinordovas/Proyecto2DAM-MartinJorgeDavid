@@ -150,7 +150,14 @@ body {
     text-shadow: 2px 2px 4px #000000;
 }
 
-.quienesSomos p {
+.quienesSomos h5{
+    padding-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+}
+
+.quienesSomos h6{
     padding-top: 40px;
     padding-left: 40px;
     padding-right: 40px;

@@ -18,7 +18,7 @@ else {
 
 <head>
     <meta charset='utf-8'>
-    <title>Nombre Empresa</title>
+    <title>La Salle Business Match 2026</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <!-- Stylesheets -->
     <link rel='stylesheet' type='text/css' media='screen' href='bootstrap/css/bootstrap.min.css'>
@@ -35,7 +35,7 @@ else {
 <body class="cuadroInterior">
     <div class="position-relative">
         <div id="toastContainer" class="toast-container position-fixed top-4 end-4 p-3" style="z-index: 1080;">
-            <?php if ($mensaje == "Ha iniciado sesión. Bienvenid@."): ?>
+            <?php if ($mensaje == "Ha iniciado sesi&oacute;n. Bienvenid@."): ?>
                 <div id="liveToast" class="toast text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
                     <div class="d-flex">
                         <div class="toast-body">
@@ -59,7 +59,7 @@ else {
     </div>
     <nav id="navbarPaginaPrincipal" class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-            <img src="images/logoncm.png" alt="Logo de La Salle" width="60px">
+            <img src="images/logoncm.png" alt="Logo de La Salle" width="70px">
             <?php if($usuario):?>
                 <span class="navbar-text d-flex align-items-center my-0 align-self-center ps-3 me-3 emailUsuario" style="font-weight: 500; line-height: 1;">
                     <i class="bi bi-person-circle me-1 fs-5" style="color: inherit; color: rgba(22, 59, 141);"></i>
@@ -74,15 +74,11 @@ else {
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a href="#carruselFotos" class="nav-link">Inicio</a></li>
                     <li class="nav-item"><a href="#quienesSomos" class="nav-link">Feria</a></li>
-                    <li class="nav-item"><a href="nosotros.php" class="nav-link">Sobre nosotros</a></li>
                     <li class="nav-item"><a href="#contenedor" class="nav-link">Empresa ganadora</a></li>
-                    <li class="nav-item"><a href="inicio_sesion.php" id="enlaceFormulario" class="nav-link">Iniciar
-                            sesi&oacute;n</a>
-                    </li>
-                    <li class="nav-item"><a href="scriptsphp/cerrarSesion.php" id="enlaceCerrarSesion" class="nav-link">Cerrar
-                            sesi&oacute;n</a>
-                    </li>
+                    <li class="nav-item"><a href="nosotros.php" class="nav-link">Sobre nosotros</a></li>
                     <li class="nav-item"><a href="Empresas.php" class="nav-link">Empresas</a></li>
+                    <li class="nav-item"><a href="inicio_sesion.php" id="enlaceFormulario" class="nav-link">Iniciar sesi&oacute;n</a></li>
+                    <li class="nav-item"><a href="scriptsphp/cerrarSesion.php" id="enlaceCerrarSesion" class="nav-link">Cerrar sesi&oacute;n</a></li>
                 </ul>
             </div>
         </div>
@@ -91,18 +87,18 @@ else {
         <div id="carruselFotos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
             <div class="contenidoSuperpuesto">
                 <div id="tituloContenedor">
-                    <h1 class="text-center"><b>Bienvenid@ a la feria de La Salle 2025</b></h1>
+                    <h1 class="text-center"><b>Bienvenid@ a la feria de La Salle 2026</b></h1>
                 </div>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active ajusteCarrusel">
-                    <img src="images/fotoEjemploFondo1.jpg" class="d-block w-100" alt="Foto 1">
+                    <img src="images/fotoEjemploFondo2.jpg" class="d-block w-100" alt="Foto 1">
                 </div>
                 <div class="carousel-item ajusteCarrusel">
-                    <img src="images/fotoEjemploFondo2.jpg" class="d-block w-100" alt="Foto 2">
+                    <img src="images/fotoEjemploFondo3.jpeg" class="d-block w-100" alt="Foto 2">
                 </div>
                 <div class="carousel-item ajusteCarrusel">
-                    <img src="images/fotoEjemploFondo3.jpeg" class="d-block w-100" alt="Foto 3">
+                    <img src="images/foto1.jpg" class="d-block w-100" alt="Foto 3">
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carruselFotos"
                     data-bs-slide="prev">
@@ -119,18 +115,18 @@ else {
         <div class="contenedores-principales d-flex justify-content-between flex-wrap">
 
             <div class="contenedor-individual ocultar col-box" id="contenedorDescarga1">
-                <h4><b>Descarga 1</b></h4>
-                <a href="https://www.google.es" class="btn btn-light mt-3" target="_blank">Enlace 1</a>
+                <h4><b>Bases del concurso</b></h4>
+                <a href="documents/Bases del Concurso de Spot Publicitario LSBM 2026.pdf" class="btn btn-light mt-3" target="_blank">Descargar</a>
             </div>
 
             <div class="contenedor-individual ocultar col-box" id="contenedorDescarga2">
                 <h4><b>Descarga 2</b></h4>
-                <a href="https://www.google.es" class="btn btn-light mt-3" target="_blank">Enlace 2</a>
+                <a href="https://www.google.es" class="btn btn-light mt-3" target="_blank">Descargar</a>
             </div>
 
             <div class="contenedor-individual ocultar contenedorDescarga3 col-box" id="contenedorDescarga3">
                 <h4><b>Descarga 3</b></h4>
-                <a href="https://www.google.es" class="btn btn-light mt-3" target="_blank">Enlace 3</a>
+                <a href="https://www.google.es" class="btn btn-light mt-3" target="_blank">Descargar</a>
             </div>
         </div>
     </article>
@@ -138,15 +134,16 @@ else {
     <article>
         <div class="container-fluid">
             <div class="quienesSomos ocultar" id="quienesSomos">
-                <h1><b>
-                        ¿Quiénes somos?
-                    </b></h1>
+                <h1><b>&#191;En qu&eacute; consiste la feria?</b></h1>
                 <img src="images/fotoEjemploFondo2.jpg" alt="Foto de ejemplo 2">
-                <p>
-                    Desde 2007, ayudamos a las empresas y despachos profesionales a digitalizar sus procesos con
-                    herramientas informáticas de última generación, optimizando los procesos de gestión empresarial
-                    para resolver los retos a los que hay que enfrentarse diariamente en cada negocio.
-                </p>
+                <h5>
+                Es un evento nacional en el que alumnos de distintos colegios de la red de La Salle alrededor de toda Espa&#241;a muestran sus innovadoras 
+                ideas en forma de empresas ficticias.
+                <br/>
+                Los participantes traen ideas muy sorprendentes, innovadoras, originales, inclusivas y sostenibles.
+                </h5>
+                <br/>
+                <h4>&#161;Reg&iacute;strate ahora y participa!</h4>
             </div>
         </div>
     </article>
@@ -157,23 +154,19 @@ else {
                     <div class="col1">
                         <h2><b>Empresa Ganadora 2025</b></h2>
                         <img src="images/logo1.jpeg" alt="Logo de la empresa ganadora">
-                        <p>
-                            Ayudamos a las empresas a modernizarse mediante la digitalización de procesos clave,
-                            la implantación de soluciones basadas en inteligencia artificial y consultoría
-                            especializada.
-                            Nuestro enfoque está orientado a optimizar operaciones y mejorar la
-                            competitividad en un entorno digital.
+                        <p><br/>
+                        Informaci&oacute;n de la empresa que m&aacute;s votos reciba por parte del resto de las empresas
                         </p>
                     </div>
                 </div>
                 <div class="col-md-6 col2">
-                    <div class="col-12 row1">
-                        <h5><b>Este es el spot ganador de este año</b></h5>
+                    <div class="col-12 row1 text-center">
+                        <h5><b>Este es el spot ganador de este a&#241;o</b></h5>
                     </div>
                     <div class="col-12 row2">
                         <div class="ratio ratio-16x9">
                             <iframe class="video_centrada"
-                                src="https://www.youtube.com/embed/LXb3EKWsInQ?si=Me5Sonmhj0pppGIe"
+                                src="https://www.youtube.com/embed/IQ6VMB7K2gg?si=QK6nZNLNEsVlMIdN"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -188,28 +181,25 @@ else {
             <div class="row piePagina">
                 <div class="col-md-4 columna1Footer">
                     <div class="d-flex align-items-center justify-content-center">
-                        <h5><b>Nuestra ubicación</b></h5>
+                        <h5><b>Nuestra ubicaci&oacute;n</b></h5>
                         <a href="https://maps.app.goo.gl/7xVmBDbeuFshzQDv7"><i
                                 class="bi bi-geo-alt-fill fs-4 ajustarIcono"></i></a>
                     </div>
-                    <a class="ajustarEnlaces" href="https://maps.app.goo.gl/7xVmBDbeuFshzQDv7">C. de Tomás Anzano, 1,
+                    <a class="ajustarEnlaces" href="https://maps.app.goo.gl/7xVmBDbeuFshzQDv7">C. de Tom&aacute;s Anzano, 1,
                         Casablanca, 50012 Zaragoza</a>
                 </div>
                 <div class="col-md-4 columna2Footer">
                     <div class="d-flex align-items-center justify-content-center">
-                        <h5><b>Contáctanos</b></h5>
-                        <a href="https://contacts.google.com/"><i
-                                class="bi bi-telephone-plus-fill fs-4 ajustarIcono"></i></a>
+                        <h5><b>Cont&aacute;ctanos</b></h5>
+                        <a href="nosotros.php"><i class="bi bi-telephone-plus-fill fs-4 ajustarIcono"></i></a>
                     </div>
-                    <a class="ajustarEnlaces" href="mailto:correoejemplo@gmail.com">correoejemplo@gmail.com</a>
                 </div>
                 <div class="col-md-4 columna3Footer">
                     <h5><b>Redes sociales</b></h5>
                     <div class="d-flex align-items-center justify-content-center">
-                        <a href="https://x.com/"><i class="bi bi-twitter fs-4 ajustarIcono"></i></a>
-                        <a href="https://www.facebook.com/"><i class="bi bi-facebook fs-4 ajustarIcono"></i></a>
-                        <a href="https://www.instagram.com/"><i class="bi bi-instagram fs-4 ajustarIcono"></i></a>
-                        <a href="https://www.linkedin.com/"><i class="bi bi-linkedin fs-4 ajustarIcono"></i></a>
+                        <a href="https://colegioslasalle.org/"><i class="bi bi-globe fs-4 ajustarIcono"></i></a>
+                        <a href="https://www.instagram.com/lasallesantoangelzaragoza/"><i class="bi bi-instagram fs-4 ajustarIcono"></i></a>
+                        <a href="https://www.facebook.com/lasallesantoangelzaragoza"><i class="bi bi-facebook fs-4 ajustarIcono"></i></a>
                     </div>
                 </div>
             </div>
