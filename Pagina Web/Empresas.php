@@ -2,11 +2,11 @@
 
 <?php
 session_start();
-if(isset($_SESSION['usuario'])){
-    $usuario = $_SESSION['usuario'];
-}
-else {
-    $usuario = null;
+if (isset($_SESSION['usuario'])) {
+	$usuario = $_SESSION['usuario'];
+} else {
+	header("Location: inicio_sesion.php");
+	$usuario = null;
 }
 ?>
 <html>
@@ -22,44 +22,89 @@ else {
 	<!-- Fuente Montserrat de Google -->
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 	<link rel="icon" href="images/estrella.png" type="image/png">
 </head>
 
 <body class="bg-dark">
-  	<nav id="navbarPaginaPrincipal" class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-            <div class="navbar-collapse">
-                <img src="images/logoncm.png" alt="Logo de La Salle" width="70px">
-				<?php if($usuario):?>
-					<span class="navbar-text d-flex align-items-center my-0 align-self-center ps-3 me-3 emailUsuario" style="font-weight: 500; line-height: 1;">
+	<nav id="navbarPaginaPrincipal" class="navbar navbar-expand-lg fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-collapse">
+				<img src="images/logoncm.png" alt="Logo de La Salle" width="70px">
+				<?php if ($usuario): ?>
+					<span class="navbar-text d-flex align-items-center my-0 align-self-center ps-3 me-3 emailUsuario"
+						style="font-weight: 500; line-height: 1;">
 						<i class="bi bi-person-circle me-1 fs-5" style="color: inherit; color: rgba(22, 59, 141);"></i>
-						<?= htmlspecialchars($usuario) ?> 
+						<?= htmlspecialchars($usuario) ?>
 					</span>
 				<?php endif; ?>
-				<button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar" aria-controls="menuNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a href="index.php" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="inicio_sesion.php" class="nav-link" id="enlaceFormulario">Iniciar sesi&oacute;n</a></li>
-					<li class="nav-item"><a href="scriptsphp/cerrarSesion.php" id="enlaceCerrarSesion" class="nav-link">Cerrar
-                            sesi&oacute;n</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+				<button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar"
+					aria-controls="menuNavbar" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item"><a href="index.php" class="nav-link">Inicio</a></li>
+					<li class="nav-item"><a href="inicio_sesion.php" class="nav-link" id="enlaceFormulario">Iniciar
+							sesi&oacute;n</a></li>
+					<li class="nav-item"><a href="scriptsphp/cerrarSesion.php" id="enlaceCerrarSesion"
+							class="nav-link">Cerrar
+							sesi&oacute;n</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 	<section class="fondo">
 		<div class="todasEmpresas">
-			
-				<div class="recuadroEmpresas">
+			<div class="recuadroEmpresas">
 				<div class="container py-5">
 					<h2 class="text-light mb-4">Empresas registradas</h2>
+					<div class="mb-4">
+						<button class="btn btn-primary bt_votar" type="button" data-bs-toggle="collapse"
+							data-bs-target="#menuVotar" aria-expanded="false" aria-controls="menuVotar">
+							Votar empresa
+						</button>
+						<div class="collapse mt-2" id="menuVotar">
+							<div class="card card-body cuadro-azul">
 
+								<form action="scriptsphp/votaciones.php" method="POST">
+									<label class="form-label fw-bold">Selecciona una empresa:</label>
+
+									<select name="empresa" class="form-select mb-3 select-blanco" required>
+										<option value="">-- Elige una empresa --</option>
+										<option value="3">LASI</option>
+										<option value="4 LASALLE">EPIWORKS LASALLE</option>
+										<option value="5">ZAPALDU</option>
+										<option value="6">Aulki</option>
+										<option value="7">LOREARTEAN</option>
+										<option value="8">GREENYKIT</option>
+										<option value="9">VelocityCar</option>
+										<option value="10">GISING, SLS</option>
+										<option value="11">Enfruita't SL</option>
+										<option value="12">IronBites, SL</option>
+										<option value="13">HEMERA, SL</option>
+										<option value="14">TASTETS D'ARREU, S.L.</option>
+										<option value="15">NEXA</option>
+										<option value="16">Tech City</option>
+										<option value="17">VISUALIX</option>
+										<option value="18">CREAMATERIA</option>
+										<option value="19">PAPERMÁS</option>
+										<option value="20">OFIDESIGN</option>
+										<option value="21">Tecnus</option>
+										<option value="22">AUREAL SL</option>
+										<option value="23">SICUREZZADIRECT SL</option>
+										<option value="24">FURNINNOVA SL</option>
+										<option value="25">SALLEMAT SUMINISTROS S.L.</option>
+									</select>
+
+									<button type="submit" class="btn btn-enviar w-100" name="btn-enviar">Enviar voto</button>
+								</form>
+
+							</div>
+						</div>
+					</div>
 					<div class="row g-4">
-
-						<!-- Empresa 1 -->
 						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 							<div class="card h-100 shadow empresa-card">
 								<img src="images/LASI.png" class="card-img-top p-3" alt="Logo Empresa 1">
@@ -464,7 +509,8 @@ else {
 						<!-- Empresa 21 -->
 						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 							<div class="card h-100 shadow empresa-card">
-								<img src="images/laSalleSagradoCorazon.jpg" class="card-img-top p-3" alt="Logo AUREAL SL">
+								<img src="images/laSalleSagradoCorazon.jpg" class="card-img-top p-3"
+									alt="Logo AUREAL SL">
 								<div class="card-body empresa-card-body">
 									<div>
 										<h5 class="card-title">AUREAL SL</h5>
@@ -481,7 +527,8 @@ else {
 						<!-- Empresa 22 -->
 						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 							<div class="card h-100 shadow empresa-card">
-								<img src="images/laSalleSagradoCorazon.jpg" class="card-img-top p-3" alt="Logo SICUREZZADIRECT SL">
+								<img src="images/laSalleSagradoCorazon.jpg" class="card-img-top p-3"
+									alt="Logo SICUREZZADIRECT SL">
 								<div class="card-body empresa-card-body">
 									<div>
 										<h5 class="card-title">SICUREZZADIRECT SL</h5>
@@ -499,7 +546,8 @@ else {
 						<!-- Empresa 23 -->
 						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 							<div class="card h-100 shadow empresa-card">
-								<img src="images/laSalleSagradoCorazon.jpg" class="card-img-top p-3" alt="Logo FURNINNOVA SL">
+								<img src="images/laSalleSagradoCorazon.jpg" class="card-img-top p-3"
+									alt="Logo FURNINNOVA SL">
 								<div class="card-body empresa-card-body">
 									<div>
 										<h5 class="card-title">FURNINNOVA SL</h5>
@@ -537,7 +585,7 @@ else {
 					</div>
 				</div>
 
-		</div>
+			</div>
 	</section>
 	<script src='bootstrap/js/bootstrap.bundle.js'></script>
 	<script src="javascripts/gestionarCookies.js"></script>
