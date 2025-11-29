@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
 $baseDatos = "LSBMGrupo3";
-$usuario = "registros";
-$pass = "accesoBD2025grupo3";
+$usuario = "root";
+$pass = "ordovas2005";
 $conexion = mysqli_connect($host, $usuario, $pass, $baseDatos);
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     if($conexion){

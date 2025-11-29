@@ -8,6 +8,7 @@ h2.text-light {
     display: inline-block;
     padding: 5px 10px;
     border-radius: 4px;
+
 }
 
 .fondo {
@@ -21,7 +22,20 @@ h2.text-light {
     justify-content: center;
     align-items: center;
     padding-top: 150px;
+    z-index: 1; /* Importante */
 }
+
+.fondo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55); /* Oscurecimiento ajustable */
+    z-index: -1; /* Se coloca detrás del contenido */
+}
+
 
 .empresa-card {
     background: rgba(255, 255, 255, 0.85);
@@ -37,6 +51,7 @@ h2.text-light {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 	
 }
+
 
 .empresa-card:hover {
     transform: translateY(-6px);
@@ -133,7 +148,7 @@ h2.text-light {
      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
 }
 
-#menuVotar button.btn.btn-enviar {
+#menuVotar .btn.btn-enviar {
     background-color: white !important;
     color: #1f4ba3 !important;
     border: 2px solid white !important;
@@ -145,3 +160,26 @@ h2.text-light {
     background-color: #f2f2f2 !important;
     color: #153a76 !important;
 }
+
+#menuRanking .card.card-body.cuadro-azul {
+     background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+    border: 2px solid #16397d !important;
+    border-radius: 10px !important;
+    color: white !important;
+}
+
+#menuRanking .cuadro-azul label {
+    color: white !important;
+}
+
+#menuRankingr select.form-select.select-blanco {
+    background-color: white !important;
+    color: #1f4ba3 !important;
+    border: 1px solid #16397d !important;
+    font-weight: 600 !important;
+}
+
+#menuRanking select.form-select.select-blanco option {
+    color: black !important;
+}
+

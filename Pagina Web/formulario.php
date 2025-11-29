@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <nav id="navbarPaginaPrincipal" class="navbar navbar-expand fixed-top">
+    <nav id="navbarPaginaPrincipal" class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <img src="images/logoncm.png" alt="Logo de La Salle" width="70px">
             <button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar"
@@ -117,5 +117,5 @@
         </div>
         
 </body>
-
+<script src='bootstrap/js/bootstrap.bundle.js'></script>
 </html>

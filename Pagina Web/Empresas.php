@@ -2,11 +2,19 @@
 
 <?php
 session_start();
+include "scriptsphp/mostrarVotaciones.php";
 if (isset($_SESSION['usuario'])) {
 	$usuario = $_SESSION['usuario'];
 } else {
 	header("Location: inicio_sesion.php");
 	$usuario = null;
+}
+
+if(isset($_SESSION['resultados_votaciones'])){
+	$resultadosVotaciones = $_SESSION['resultados_votaciones'];
+}
+else {
+	$resultadosVotaciones = [];
 }
 ?>
 <html>
@@ -31,19 +39,19 @@ if (isset($_SESSION['usuario'])) {
 <body class="bg-dark">
 	<nav id="navbarPaginaPrincipal" class="navbar navbar-expand-lg fixed-top">
 		<div class="container-fluid">
-			<div class="navbar-collapse">
-				<img src="images/logoncm.png" alt="Logo de La Salle" width="70px">
-				<?php if ($usuario): ?>
-					<span class="navbar-text d-flex align-items-center my-0 align-self-center ps-3 me-3 emailUsuario"
-						style="font-weight: 500; line-height: 1;">
-						<i class="bi bi-person-circle me-1 fs-5" style="color: inherit; color: rgba(22, 59, 141);"></i>
-						<?= htmlspecialchars($usuario) ?>
-					</span>
-				<?php endif; ?>
-				<button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar"
-					aria-controls="menuNavbar" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
+			<img src="images/logoncm.png" alt="Logo de La Salle" width="70px">
+			<?php if ($usuario): ?>
+				<span class="navbar-text d-flex align-items-center my-0 align-self-center ps-3 me-3 emailUsuario"
+					style="font-weight: 500; line-height: 1;">
+					<i class="bi bi-person-circle me-1 fs-5" style="color: inherit; color: rgba(22, 59, 141);"></i>
+					<?= htmlspecialchars($usuario) ?>
+				</span>
+			<?php endif; ?>
+			<button class="navbar-toggler ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar"
+				aria-controls="menuNavbar" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="menuNavbar">
 				<ul class="navbar-nav ms-auto">
 					<li class="nav-item"><a href="index.php" class="nav-link">Inicio</a></li>
 					<li class="nav-item"><a href="inicio_sesion.php" class="nav-link" id="enlaceFormulario">Iniciar
@@ -59,7 +67,7 @@ if (isset($_SESSION['usuario'])) {
 		<div class="todasEmpresas">
 			<div class="recuadroEmpresas">
 				<div class="container py-5">
-					<h2 class="text-light mb-4">Empresas registradas</h2>
+					<h2 class="text-light mb-4 titulo">Empresas registradas</h2>
 					<div class="mb-4">
 						<button class="btn btn-primary bt_votar" type="button" data-bs-toggle="collapse"
 							data-bs-target="#menuVotar" aria-expanded="false" aria-controls="menuVotar">
@@ -74,7 +82,7 @@ if (isset($_SESSION['usuario'])) {
 									<select name="empresa" class="form-select mb-3 select-blanco" required>
 										<option value="">-- Elige una empresa --</option>
 										<option value="3">LASI</option>
-										<option value="4 LASALLE">EPIWORKS LASALLE</option>
+										<option value="4">EPIWORKS LASALLE</option>
 										<option value="5">ZAPALDU</option>
 										<option value="6">Aulki</option>
 										<option value="7">LOREARTEAN</option>
@@ -104,6 +112,56 @@ if (isset($_SESSION['usuario'])) {
 							</div>
 						</div>
 					</div>
+					<!-- BOTÓN PARA MOSTRAR RANKING -->
+					<div class="mb-4">
+
+						<button class="btn btn-primary bt_votar" type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#menuRanking"
+							aria-expanded="false"
+							aria-controls="menuRanking">
+							Ver ranking de votos
+						</button>
+
+						<!-- CONTENEDOR DESPLEGABLE -->
+						<div class="collapse mt-2" id="menuRanking">
+							<div class="card card-body cuadro-azul ">
+
+								<h4 class="text-light mb-3">Ranking de empresas</h4>
+
+								<div class="table-responsive">
+									<table class="table table-ranking text-center">
+										<thead>
+											<tr>
+												<th>Posición</th>
+												<th>Empresa</th>
+												<th>Votos</th>
+											</tr>
+										</thead>
+										<tbody>
+											<?php if(empty($resultadosVotaciones)): ?>
+												<tr><td colspan="3">No hay resultados de votación</td></tr>
+											<?php else: ?>
+												<?php $posicion = 1; ?>
+												<?php foreach($resultadosVotaciones as $votacion): ?>
+													<tr>
+														<td><?= $posicion++ ?></td>
+														<td><?=htmlspecialchars($votacion['nombreEmpresa'])?></td>
+														<td><?=htmlspecialchars($votacion['numeroVotos'])?></td>
+													</tr>
+												<?php endforeach; ?>
+											<?php endif?>
+										</tbody>
+									</table>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+
+					<!--Empresa 1-->
 					<div class="row g-4">
 						<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 							<div class="card h-100 shadow empresa-card">

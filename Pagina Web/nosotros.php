@@ -52,17 +52,17 @@ else {
         <div class="container-fluid">
             <div class="bloqueInicial row">
                 <div class="col-xl-4 persona">
-                    <img class="imagenPersona" src="images/estrella.png" alt="Foto de Jorge Villuendas Soro"/>
+                    <img class="imagenPersona" src="images/fotoJorge.jpg" alt="Foto de Jorge Villuendas Soro"/>
                     <h4>Jorge Villuendas Soro</h4>
                     <h6>jorgevilluendassoro@lasallesantoangel.es</h6>
                 </div>
                 <div class="col-xl-4 persona">
-                    <img class="imagenPersona" src="images/estrella.png" alt="Foto de Martín Ordovás Gracia"/>
+                    <img class="imagenPersona" src="images/fotoMartin.jpg" alt="Foto de Martín Ordovás Gracia"/>
                     <h4>Mart&iacute;n Ordov&aacute;s Gracia</h4>
                     <h6>martinordovasgracia@lasallesantoangel.es</h6>
                 </div>
                 <div class="col-xl-4 persona">
-                    <img class="imagenPersona" src="images/estrella.png" alt="Foto de David Pasamar Arroyo"/>
+                    <img class="imagenPersona" src="images/fotoDavid.jpg" alt="Foto de David Pasamar Arroyo"/>
                     <h4>David Pasamar Arroyo</h4>
                     <h6>davidpasamararroyo@lasallesantoangel.es</h6>
                 </div>
@@ -73,7 +73,7 @@ else {
                 <div class="escuela">
                     <div class="row align-items-center">
                         <div class="col-xl-6">
-                            <img class="imagenEscuela" src="images/lasalle.jpg" alt="Imagen de La Salle Santo Ángel">
+                            <a href="https://lasallesantoangel.es/"><img class="imagenEscuela" src="images/lasalle.jpg" alt="Imagen de La Salle Santo Ángel"></a>
                         </div>
                         <div class="col-xl-6 huecoTexto">
                             <h1 class="textoColegio"><b>La Salle Santo &Aacute;ngel</b></h1>
@@ -87,21 +87,30 @@ else {
             </div>
         </div>
         <div class="container-fluid">
-            <div class="bloqueInicial mt-5 row">
-                <div class="col-xl-4 persona">
-                    <img class="imagenPersona" src="images/estrella.png" alt="Foto de Jorge Villuendas Soro"/>
-                    <h4>Alumno de Ir&uacute;n</h4>
-                    <h6></h6>
+            <div class="bloqueInicial mt-5">
+                <div class="row">
+                    <div class="col-xl-6 persona">
+                        <img class="imagenPersona" src="images/imagenPersona.png" alt="Foto de Jorge Villuendas Soro"/>
+                        <h4>Rub&eacute;n Fern&aacute;ndez Villanueva</h4>
+                        <h6>rubenfernandezvillanueva@irungolasalle.eus</h6>
+                    </div>
+                    <div class="col-xl-6 persona">
+                        <img class="imagenPersona" src="images/imagenPersona.png" alt="Foto de Martín Ordovás Gracia"/>
+                        <h4>Oier Merino Aramburu</h4>
+                        <h6>oiermerinoaramburu@irungolasalle.eus</h6>
+                    </div>
                 </div>
-                <div class="col-xl-4 persona">
-                    <img class="imagenPersona" src="images/estrella.png" alt="Foto de Martín Ordovás Gracia"/>
-                    <h4>Alumno de Ir&uacute;n</h4>
-                    <h6></h6>
-                </div>
-                <div class="col-xl-4 persona">
-                    <img class="imagenPersona" src="images/estrella.png" alt="Foto de David Pasamar Arroyo"/>
-                    <h4>Alumno de Ir&uacute;n</h4>
-                    <h6></h6>
+                <div class="row">
+                    <div class="col-xl-6 persona">
+                        <img class="imagenPersona" src="images/imagenPersona.png" alt="Foto de David Pasamar Arroyo"/>
+                        <h4>Aritz Goicoechea Larburu</h4>
+                        <h6>aritzgoicoechealarburu@irungolasalle.eus</h6>
+                    </div>
+                    <div class="col-xl-6 persona">
+                        <img class="imagenPersona" src="images/imagenPersona.png" alt="Foto de David Pasamar Arroyo"/>
+                        <h4>Irati Otamendi Maiz</h4>
+                        <h6>iotamendi@irungolasalle.eus</h6>
+                    </div>
                 </div>
             </div>
         </div>
@@ -110,7 +119,7 @@ else {
                 <div class="escuela">
                     <div class="row align-items-center">
                         <div class="col-xl-6">
-                            <img class="imagenEscuela" src="images/iruncolegio.jpg" alt="Imagen de La Salle Irún">
+                            <a href="https://irungolasalle.eus/?lang=es"><img class="imagenEscuela" src="images/iruncolegio.jpg" alt="Imagen de La Salle Irún"></a>
                         </div>
                         <div class="col-xl-6 huecoTexto">
                             <h1 class="textoColegio"><b>Irungo La Salle</b></h1>

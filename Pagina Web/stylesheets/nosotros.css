@@ -23,8 +23,15 @@
     margin-top:20px;
 }
 
+@media screen and (max-width:756px){
+    .persona h6{
+        font-size:14px;
+    }
+}
+
 .imagenPersona{
-    width:100px;
+    width:200px;
+    border-radius:20px;
 }
 
 .escuela{

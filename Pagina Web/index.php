@@ -73,8 +73,8 @@ else {
             <div class="collapse navbar-collapse" id="menuNavbar">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a href="#carruselFotos" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="#quienesSomos" class="nav-link">Feria</a></li>
-                    <li class="nav-item"><a href="#contenedor" class="nav-link">Empresa ganadora</a></li>
+                    <li class="nav-item"><a href="#hueco1" class="nav-link">Feria</a></li>
+                    <li class="nav-item"><a href="#hueco2" class="nav-link">Empresa ganadora</a></li>
                     <li class="nav-item"><a href="nosotros.php" class="nav-link">Sobre nosotros</a></li>
                     <li class="nav-item"><a href="Empresas.php" class="nav-link">Empresas</a></li>
                     <li class="nav-item"><a href="inicio_sesion.php" id="enlaceFormulario" class="nav-link">Iniciar sesi&oacute;n</a></li>
@@ -111,6 +111,7 @@ else {
             </div>
         </div>
     </section>
+    <br><br>
     <article>
         <div class="contenedores-principales d-flex justify-content-between flex-wrap">
 
@@ -130,6 +131,7 @@ else {
             </div>
         </div>
     </article>
+            <div class="hueco1" id="hueco1"> <br><br></div>
 
     <article>
         <div class="container-fluid">
@@ -147,6 +149,7 @@ else {
             </div>
         </div>
     </article>
+    <div id="hueco2"><br><br><br></div>
     <article>
         <div class="container-fluid contenedor ocultar" id="contenedor">
             <div class="row">
