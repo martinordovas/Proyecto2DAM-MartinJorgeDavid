@@ -6,16 +6,6 @@ const contenidoMenu = document.getElementById('menuNavbar');
 const quienesSomos = document.getElementById('quienesSomos');
 const altura = 50;
 
-window.addEventListener('scroll', function () {
-    if (barraNavegacion && window.scrollY > altura) {
-        barraNavegacion.classList.add('cambioNavbar');
-    } else {
-        if (!contenidoMenu.classList.contains('show')) {
-            barraNavegacion.classList.remove('cambioNavbar');
-        }
-    }
-});
-
 contenidoMenu.addEventListener('show.bs.collapse', function () {
     barraNavegacion.classList.add('cambioNavbar');
 });

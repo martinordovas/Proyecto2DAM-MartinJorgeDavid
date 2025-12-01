@@ -35,7 +35,7 @@
     </nav>
     <div>
         <div class="contenido2">
-            <div class="formularioInicioSesion"> <!--id="formularioContenedor"-->
+            <div class="formularioInicioSesion">
                 <form action="scriptsphp/iniciarSesion.php" id="" method="POST">
                     <h2 class="text-center text-white mb-3">Accede a la Feria 2025</h2>
                     <h4 class="text-center text-white mb-4">Bienvenido a La Salle Business Match</h4>
