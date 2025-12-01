@@ -2,7 +2,7 @@
 $host = "localhost";
 $baseDatos = "LSBMGrupo3";
 $usuario = "root";
-$pass = "ordovas2005";
+$pass = "1234";
 $conexion = mysqli_connect($host, $usuario, $pass, $baseDatos);
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
     if($conexion){
