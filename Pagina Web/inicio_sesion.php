@@ -28,7 +28,6 @@
             <div class="collapse navbar-collapse" id="menuNavbar">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a href="index.php" class="nav-link">Inicio</a></li>
-                    <li class="nav-item"><a href="Empresas.php" class="nav-link">Empresa ganadora</a></li>
                 </ul>
             </div>
         </div>
